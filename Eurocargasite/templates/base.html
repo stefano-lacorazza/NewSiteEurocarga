@@ -11,9 +11,10 @@
 
 
   <body>
-<!-- Navbar (sit on top) -->
+
+    <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
+  <div class="w3-bar" id="myNavbar">
     <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
@@ -32,42 +33,23 @@
 </div>
 
 
+  {% block content %}{% endblock %}
+
+
+
+
+
 
 <!-- The main footer of the site -->
 <footer id="footer" class="overflow-hidden padding-xlarge pb-0">
   
 </footer>
 
-<script>
-  // Modal Image Gallery
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
-  }
-  
-  
-  // Toggle between showing and hiding the sidebar when clicking the menu icon
-  var mySidebar = document.getElementById("mySidebar");
-  
-  function w3_open() {
-    if (mySidebar.style.display === 'block') {
-      mySidebar.style.display = 'none';
-    } else {
-      mySidebar.style.display = 'block';
-    }
-  }
-  
-  // Close the sidebar with the close button
-  function w3_close() {
-      mySidebar.style.display = "none";
-  }
-  </script>
+
     
 
   
-</body>
+  </body>
 
 
 </html>
