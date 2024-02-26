@@ -3,20 +3,24 @@
   <head>
     {% load static %}
     <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/icons/favicon.ico' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css"  href="{% static 'mainsite/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
   <style>
     @font-face {
-    font-family: "Open-Sans";
+    font-family: "Open-Sans-Bold";
     src: url("{% static 'mainsite/fonts/OpenSans-Bold.ttf' %}") format("truetype");
     }
-
-
+    @font-face {
+    font-family: "Open-Sans";
+    src: url("{% static 'mainsite/fonts/OpenSans-Regular.ttf' %}") format("truetype");
+    }
     .w3-bar {
-        font-family: 'Open-Sans';font-size: 22px;
+        font-family: 'Open-Sans-Bold';font-size: 22px;
         color: white;
 
     }
@@ -37,11 +41,33 @@
     <a href="#" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/Logo-white.png' %}" width="300" id="toplogo" /></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small" style ="padding-top: 20px;">
-      <a href="#" class="w3-bar-item w3-button" style ="padding-top: 20px;">INICIO</a>
-      <a href="#team" class="w3-bar-item w3-button" style ="padding-top: 20px;"><i class="fa fa-user"></i> QUIÉNES SOMOS</a>
-      <a href="#work" class="w3-bar-item w3-button" style ="padding-top: 20px;"><i class="fa fa-th"></i> SERVICIOS</a>
-      <a href="#pricing" class="w3-bar-item w3-button" style ="padding-top: 20px;"><i class="fa fa-usd"></i> DEPARTAMENTOS</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> <button class="w3-button w3-round-large w3-white contact-button">Contáctenos</button></a>
+      <a href="#" class="w3-bar-item w3-button topbaritem" style ="padding-top: 20px;">INICIO</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="#" class="w3-button w3-hide-small topbaritem" style ="padding-top: 20px;"><b> QUIÉNES SOMOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem" >Valores como Empresa</a>
+            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem">Misión y Visión</a>
+          </div>
+      </div>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="#" class="w3-button w3-hide-small topbaritem" style ="padding-top: 20px;"><b> SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem" >Transporte terrestre</a>
+            <a href="#" class="w3-bar-item w3-button topbaritem" >Flete Marítimo</a>
+            <a href="#" class="w3-bar-item w3-button topbaritem" >Flete Aéreo</a>
+            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem">Otros Servicios</a>
+          </div>
+      </div>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="#" class="w3-button w3-hide-small topbaritem" style ="padding-top: 20px;"><b> DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem" >Importación</a>
+            <a href="#" class="w3-bar-item w3-button topbaritem" >Exportación</a>
+            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem">Contabilidad</a>
+          </div>
+      </div>
+      <a href="#contact" class="w3-bar-item w3-button"><button class="w3-button w3-round-large w3-white contact-button">Contáctenos</button></a>
+      <button class="w3-button over-navbar-button" style = "font-family: Open-Sans;"><img src="{% static 'mainsite/images/icons/colombia.png' %}" style="height: 20px">ES<i class="fa fa-caret-down"></i></button>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
