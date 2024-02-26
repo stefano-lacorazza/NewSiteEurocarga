@@ -19,6 +19,17 @@
     font-family: "Open-Sans";
     src: url("{% static 'mainsite/fonts/OpenSans-Regular.ttf' %}") format("truetype");
     }
+    @font-face {
+    font-family: "Roboto-Bold";
+    src: url("{% static 'mainsite/fonts/Roboto-Bold.ttf' %}") format("truetype");
+    }
+    .semitransparent-image-behind-text {
+            background-image:  url("{% static 'mainsite/images/21.png' %}");
+
+            display: flex;
+            background-size: cover;
+            background-position: center;
+        }
     .w3-bar {
         font-family: 'Open-Sans-Bold';font-size: 22px;
         color: white;
@@ -85,10 +96,43 @@
 
 
 
-<!-- The main footer of the site -->
-<footer id="footer" class="overflow-hidden padding-xlarge pb-0">
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32" style = "color :white; background-color: #1B4A7D;">
+    <div class="w3-third">
+      <a href="#" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/Logo-white.png' %}" width="300" id="toplogo" /></a>
+      <h3 style = "font-family: Roboto-Bold;">Contáctanos:</h3>
+      <p style = "margin-bottom: 0; display: inline;">(+ 57) 310 - 424 9299</p>
+      <p>(+ 57) 316 - 521 9867</p>
+      
+    </div>
   
-</footer>
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Lorem</span><br>
+          <span>Sed mattis nunc</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Ipsum</span><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third w3-serif semitransparent-image-behind-text">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
 
 
     
