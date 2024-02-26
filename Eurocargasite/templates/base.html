@@ -5,24 +5,43 @@
     <title>{% block title %}{% endblock %}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'mainsite/css/styles.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static 'mainsite/css/styles.css' %}">
 
   </head>
+  <style>
+    @font-face {
+    font-family: "Open-Sans";
+    src: url("{% static 'mainsite/fonts/OpenSans-Bold.ttf' %}") format("truetype");
+    }
 
+
+    .w3-bar {
+        font-family: 'Open-Sans';font-size: 22px;
+        color: white;
+
+    }
+    .w3-right-item {
+      padding-top: 20px;
+    }
+
+    .contact-button {
+    color: #4FB4E6;
+}
+    </style>
 
   <body>
 
     <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+  <div class="w3-bar" id="myNavbar" style ="padding-top: 20px;">
+    <a href="#" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/Logo-white.png' %}" width="300" id="toplogo" /></a>
     <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    <div class="w3-right w3-hide-small" style ="padding-top: 20px;">
+      <a href="#" class="w3-bar-item w3-button" style ="padding-top: 20px;">INICIO</a>
+      <a href="#team" class="w3-bar-item w3-button" style ="padding-top: 20px;"><i class="fa fa-user"></i> QUIÉNES SOMOS</a>
+      <a href="#work" class="w3-bar-item w3-button" style ="padding-top: 20px;"><i class="fa fa-th"></i> SERVICIOS</a>
+      <a href="#pricing" class="w3-bar-item w3-button" style ="padding-top: 20px;"><i class="fa fa-usd"></i> DEPARTAMENTOS</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> <button class="w3-button w3-round-large w3-white contact-button">Contáctenos</button></a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
