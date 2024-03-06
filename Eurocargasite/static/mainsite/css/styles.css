@@ -246,3 +246,15 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     top: 2px;
     right: 10px;
 }
+.video-container {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+}
