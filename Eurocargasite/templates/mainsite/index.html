@@ -27,8 +27,16 @@
     src: url("{% static 'mainsite/fonts/Roboto-Regular.ttf' %}") format("truetype");
     }
     @font-face {
+    font-family: "Roboto-Bold";
+    src: url("{% static 'mainsite/fonts/Roboto-Bold.ttf' %}") format("truetype");
+    }
+    @font-face {
     font-family: "Raleway-Bold";
     src: url("{% static 'mainsite/fonts/Raleway-Bold.ttf' %}") format("truetype");
+    }
+    @font-face {
+    font-family: "Raleway-Regular";
+    src: url("{% static 'mainsite/fonts/Raleway-Regular.ttf' %}") format("truetype");
     }
     @font-face {
     font-family: "Open-Sans-Bold";
@@ -119,7 +127,7 @@
     </video>
     <div class="overlay-text">
         <p style="font-family: 'Raleway-Bold'; font-size: 60px; margin-bottom: 0px; line-height: 1;">AGENCIA DE CARGA</p>
-        <p style="font-family: 'Raleway-Bold'; font-size: 71px; margin-top: 0px; margin-bottom: 0px; text-decoration: underline; line-height: 1;"">INTERNACIONAL</p>
+        <p style="font-family: 'Raleway-Bold'; font-size: 71px; margin-top: 0px; margin-bottom: 0px; text-decoration: underline; line-height: 1;">INTERNACIONAL</p>
         <p style="font-family: 'Roboto-Regular'; font-size: 22px; ">CONECTANDO DESTINOS, ENTREGANDO PROMESAS</p>
         <button class="w3-button w3-round-large  services-button" style = "padding: 15px 30px;">Ver Servicios</button>
     </div>
@@ -158,13 +166,23 @@
     
 
 </div>
-<div class="image-container" style="display: flex; justify-content: flex-end; background-color: #1B4A7D;">
+
+<div style="display: flex; justify-content: space-between; background-color: #1B4A7D;">
     <div class="blue-rectangle"></div>
+    <div class="text-container">
+        <br><br><br><br>
+        <p style = "font-family: 'Raleway-Regular'; color: white; font-size: 20px;">Descubre como podemos optimizar tu cadena de suministro.</p>
+        <p style = "font-family: 'Raleway-Bold'; color: white; font-size: 20px;">¡Contáctanos hoy para una cotización personalizada y sin compromiso!</p>
+    </div>
     <div class="image" style="position: relative; margin-left: 0px;">
         <img src="{% static 'mainsite/images/cargoplane.png' %}" alt="Your image description">
         <button style="font-family: 'Open-Sans-Bold'; color:#1B4A7D" class="w3-padding-large centered-button w3-round-xlarge w3-xlarge w3-border-white">¡Inicia tu Envío!</button>
     </div>
 </div>
+<div style="margin-top: 50px; font-family: 'Roboto-Bold'; font-size: 45px; display: flex; justify-content: center; align-items: center; color:#1B4A7D;">
+    <p">Nuestros servicios</p>
+</div>
+
 
 <div class="services-container">
     <div class="image-container">
@@ -185,5 +203,39 @@
     </div>
 </div>
 
+<div class="services-container" style="display: flex; justify-content: space-between;">
+    <div style="display: flex; align-items: center;">
+        <img style="width: 40%;" src="{% static 'mainsite/images/clientes.png' %}" alt="Image 1">
+        <div>
+            <p style = "color:#429BFF; font-size: 30px; margin-bottom: 0px;">+ 09</p>
+            <p style = "color:#666666; font-size: 20px; margin-bottom: 0px; margin-top: 0px;">Clientes</p>
+            <p style = "color:#666666; font-size: 20px; margin-top: 0px;">satisfechos</p>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <img style="width: 40%;" src="{% static 'mainsite/images/envios.png' %}" alt="Image 2">
+        <div>
+            <p style = "color:#429BFF; font-size: 30px; margin-bottom: 0px;">+ 124</p>
+            <p style = "color:#666666; font-size: 20px; margin-bottom: 0px; margin-top: 0px;">Envíos</p>
+            <p style = "color:#666666; font-size: 20px; margin-top: 0px;">realizados</p>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <img style="width: 40%;" src="{% static 'mainsite/images/alianzas.png' %}" alt="Image 3">
+        <div>
+            <p style = "color:#429BFF; font-size: 30px; margin-bottom: 0px;">+ 40</p>
+            <p style = "color:#666666; font-size: 20px; margin-bottom: 0px; margin-top: 0px;">Alianzas</p>
+            <p style = "color:#666666; font-size: 20px; margin-top: 0px;">estratégicas</p>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <img style="width: 40%;" src="{% static 'mainsite/images/destinos.png' %}" alt="Image 4">
+        <div>
+            <p style = "color:#429BFF; font-size: 30px; margin-bottom: 0px;">+ 15</p>
+            <p style = "color:#666666; font-size: 20px; margin-bottom: 0px; margin-top: 0px;">Destinos</p>
+            <p style = "color:#666666; font-size: 20px; margin-top: 0px;">alcanzados</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
