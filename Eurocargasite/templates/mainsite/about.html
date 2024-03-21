@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("{% static 'mainsite/fonts/Roboto-Regular.ttf' %}") format("truetype");
+    }
+    @font-face {
+    font-family: "Roboto-Bold";
+    src: url("{% static 'mainsite/fonts/Roboto-Bold.ttf' %}") format("truetype");
+    }
+    @font-face {
+    font-family: "Raleway-Bold";
+    src: url("{% static 'mainsite/fonts/Raleway-Bold.ttf' %}") format("truetype");
+    }
+    @font-face {
+    font-family: "Raleway-Regular";
+    src: url("{% static 'mainsite/fonts/Raleway-Regular.ttf' %}") format("truetype");
+    }
+    @font-face {
+    font-family: "Open-Sans-Bold";
+    src: url("{% static 'mainsite/fonts/OpenSans-Bold.ttf' %}") format("truetype");
+    }
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 100%; /* adjust as needed */
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-container .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff; /* adjust as needed */
+    }
+
+</style>
+
+<div class="image-container" style = "z-index: -1;">
+    <img src="{% static 'mainsite/images/horboat.png' %}" alt="header image of a boat">
+    <div class="overlay-text">Your text here</div>
+</div>
+
+
+
+
+{% endblock %}

@@ -275,21 +275,25 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 @font-face {
-    font-family: "Open-Sans-Bold";
-    src: url("{% static 'mainsite/fonts/OpenSans-Bold.ttf' %}") format("truetype");
-    }
-    @font-face {
-    font-family: "Open-Sans";
-    src: url("{% static 'mainsite/fonts/OpenSans-Regular.ttf' %}") format("truetype");
-    }
-    @font-face {
-    font-family: "Roboto-Bold";
-    src: url("{% static 'mainsite/fonts/Roboto-Bold.ttf' %}") format("truetype");
-    }
-    @font-face {
-    font-family: "Raleway-Regular";
-    src: url("{% static 'mainsite/fonts/Raleway-Regular.ttf' %}") format("truetype");
-    }
+font-family: "Roboto-Regular";
+src: url("{% static 'mainsite/fonts/Roboto-Regular.ttf' %}") format("truetype");
+}
+@font-face {
+font-family: "Roboto-Bold";
+src: url("{% static 'mainsite/fonts/Roboto-Bold.ttf' %}") format("truetype");
+}
+@font-face {
+font-family: "Raleway-Bold";
+src: url("{% static 'mainsite/fonts/Raleway-Bold.ttf' %}") format("truetype");
+}
+@font-face {
+font-family: "Raleway-Regular";
+src: url("{% static 'mainsite/fonts/Raleway-Regular.ttf' %}") format("truetype");
+}
+@font-face {
+font-family: "Open-Sans-Bold";
+src: url("{% static 'mainsite/fonts/OpenSans-Bold.ttf' %}") format("truetype");
+}
     .semitransparent-image-behind-text {
       background-image:  url("{% static 'mainsite/images/21.png' %}");
       background-repeat: no-repeat;
