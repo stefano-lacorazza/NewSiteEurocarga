@@ -39,11 +39,48 @@
     .image-container .overlay-text {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 10%;
         transform: translate(-50%, -50%);
         color: #fff; /* adjust as needed */
     }
+    .mivicontainer {
+        display: flex;
+        justify-content: space-between;
+    }
 
+    .rectangle {
+        width: 600px; /* adjust as needed */
+        height: 100px; /* adjust as needed */
+        background-color: #ccc; /* adjust as needed */
+        margin-bottom: 10px; /* adjust as needed */
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+
+    .rectangle:hover {
+        height: 200px; /* adjust as needed */
+        
+    }
+
+    .rectangle p {
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .rectangle:hover p {
+        opacity: 1;
+    }
+
+    .image-mivicontainer video {
+        width: 40%; /* adjust as needed */
+    }
+    .space-background {
+        background-image: url("{% static 'mainsite/images/space1.png' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+    
 </style>
 
 <div class="image-container" style = "z-index: -1;">
@@ -51,7 +88,59 @@
     <div class="overlay-text">Your text here</div>
 </div>
 
+<div style="display: flex; align-items: center;">
+    <img src="{% static 'mainsite/images/imagebox.png' %}" alt="Man carrying box" style="height: 500px;">
+    <p>Somos tu agencia de carga internacional, especializados en
+        simplificar y optimizar operaciones logísticas a nivel global.
+    </p>
+    <p>Con años de experiencia, ofrecemos soluciones eficientes y seguras para tus
+    exportaciones e importaciones. Sé parte de nuestros clientes satisfechos que confían
+    en nuestra experiencia y red global</p>
+</div>
+<div style="display: flex; align-items: center;">
+    <hr style="flex-grow: 1; border: none; border-top: 5px solid rgb(187, 184, 184);">
+    <p style="margin: 0 20px;">Conoce nuestros Valores Corporativos</p>
+    <hr style="flex-grow: 1; border: none; border-top: 5px solid rgb(187, 184, 184);">
+</div>
 
+<div class="space-background" >
+    <div class="container" style = "display: flex;  justify-content: space-between;  padding: 20px;">
+    
+        <img src="{% static 'mainsite/images/values-image.png' %}" alt="Image 1" style = "width: 100%;">
+        
+    </div>
 
-
+    <div class="mivicontainer">
+        <div>
+            <div class="rectangle">
+                <p>Your text here</p>
+            </div>
+            <div class="rectangle">
+                <p>Your text here</p>
+            </div>
+            <div class="rectangle">
+                <p>Your text here</p>
+            </div>
+        </div>
+        <div class="miviimage-container">
+            <video autoplay loop id="vid" muted width="100%">
+                <source src="{% static 'mainsite/videos/half-earth.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>En EUROCARGA, lideramos la logística internacional
+        con calidad y confiabilidad.</p>
+    <div style="position: relative;">
+        <img src="{% static 'mainsite/images/truck.png' %}" alt="A truck" style="width: 100%;">
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">EUROCARGA ha sido un pilar confiable en la logística de Bogotá, Colombia.
+            Con décadas de experiencia, nos destacamos en exportación e importación,
+            construyendo relaciones sólidas en todo el mundo.
+            </p>
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">Nuestra presencia a largo plazo refleja
+            nuestro compromiso con la excelencia
+            y la satisfacción del cliente.
+            </p>
+    </div>
+</div>
 {% endblock %}
