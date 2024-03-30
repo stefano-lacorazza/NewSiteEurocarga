@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% load static %}
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/icons/favicon.ico' %}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css"  href="{% static 'mainsite/css/styles.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  </head>
-  <style>
+<head>
+  {% load static %}
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/icons/favicon.ico' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'mainsite/css/styles.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
 
 
-  </style>
+</style>
 
-  <body >
-    <a href="https://api.whatsapp.com/send?phone=573104249299&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." class="float" target="_blank">
+<body>
+  <a href="https://api.whatsapp.com/send?phone=573104249299&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n."
+    class="float" target="_blank">
     <i class="fa fa-whatsapp my-float"></i>
-    </a>
+  </a>
 
 
-    <!-- Navbar (sit on top) -->
-<div class="" style = " position: absolute; top: 0; width: 100%;">
-  <div class="w3-bar" id="myNavbar" style ="padding-top: 20px;">
-    <a href="#" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/Logo-white.png' %}" width="300" id="toplogo" /></a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small" style ="padding-top: 20px;">
-      <a href="#" class="w3-bar-item w3-button topbaritem" style ="padding-top: 20px;">INICIO</a>
-      <div class="w3-dropdown-hover w3-hide-small">
-        <a href="#" class="w3-button w3-hide-small topbaritem" style ="padding-top: 20px;"><b> QUIÉNES SOMOS</b> <i class="fa fa-caret-down"></i></a>     
+  <!-- Navbar (sit on top) -->
+  <div class="" style=" position: absolute; top: 0; width: 100%;">
+    <div class="w3-bar" id="myNavbar" style="padding-top: 20px;">
+      <a href="#" class="w3-bar-item w3-button"><img src="{% static 'mainsite/images/Logo-white.png' %}" width="300"
+          id="toplogo" /></a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small" style="padding-top: 20px;">
+        <a href="#" class="w3-bar-item w3-button topbaritem" style="padding-top: 20px;">INICIO</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <a href="{% url 'about' %}" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b> QUIÉNES
+              SOMOS</b> <i class="fa fa-caret-down"></i></a>
           <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem" >Valores como Empresa</a>
+            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem">Valores como Empresa</a>
             <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem">Misión y Visión</a>
           </div>
-      </div>
-      <div class="w3-dropdown-hover w3-hide-small">
-        <a href="#" class="w3-button w3-hide-small topbaritem" style ="padding-top: 20px;"><b> SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
+        </div>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <a href='#' class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b>
+              SERVICIOS</b> <i class="fa fa-caret-down"></i></a>
           <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem" >Transporte terrestre</a>
-            <a href="#" class="w3-bar-item w3-button topbaritem" >Flete Marítimo</a>
-            <a href="#" class="w3-bar-item w3-button topbaritem" >Flete Aéreo</a>
+            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem">Transporte terrestre</a>
+            <a href="#" class="w3-bar-item w3-button topbaritem">Flete Marítimo</a>
+            <a href="#" class="w3-bar-item w3-button topbaritem">Flete Aéreo</a>
             <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem">Otros Servicios</a>
           </div>
-      </div>
-      <div class="w3-dropdown-hover w3-hide-small">
-        <a href="#" class="w3-button w3-hide-small topbaritem" style ="padding-top: 20px;"><b> DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
+        </div>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <a href="#" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b> DEPARTAMENTOS</b> <i
+              class="fa fa-caret-down"></i></a>
           <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem" >Importación</a>
-            <a href="#" class="w3-bar-item w3-button topbaritem" >Exportación</a>
+            <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem">Importación</a>
+            <a href="#" class="w3-bar-item w3-button topbaritem">Exportación</a>
             <a href="#" class="w3-bar-item w3-button w3-round-large topbaritem">Contabilidad</a>
           </div>
+        </div>
+        <a href="#contact" class="w3-bar-item w3-button"><button
+            class="w3-button w3-round-large w3-white contact-button">Contáctenos</button></a>
+        <button class="w3-button over-navbar-button" style="font-family: Open-Sans;"><img
+            src="{% static 'mainsite/images/icons/colombia.png' %}" style="height: 20px">ES<i
+            class="fa fa-caret-down"></i></button>
       </div>
-      <a href="#contact" class="w3-bar-item w3-button"><button class="w3-button w3-round-large w3-white contact-button">Contáctenos</button></a>
-      <button class="w3-button over-navbar-button" style = "font-family: Open-Sans;"><img src="{% static 'mainsite/images/icons/colombia.png' %}" style="height: 20px">ES<i class="fa fa-caret-down"></i></button>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
   </div>
-</div>
 
 
   {% block content %}{% endblock %}
@@ -72,33 +82,38 @@
 
 
   <!-- Footer -->
-  <footer class="w3-row-padding w3-padding-32 semitransparent-image-behind-text flex-container" style = "color :white; background-color: #1B4A7D;">
-    <div class="w3-third" style ="border-right: 1px solid white; width: 60%;">
-      <a href="#" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/Logo-white.png' %}" width="300" id="toplogo" /></a>
-      <h3 style = "font-family: Roboto-Bold;">Contáctanos:</h3>
-      
-      <img class="first-foot-icons" style = "margin-top: 15px;" src="{% static 'mainsite/images/Telefono.png' %}" alt="Phone Icon">
-      <p style = "margin-bottom: 0;">(+ 57) 310 - 424 9299</p>
-      <p style = "margin-top: 0;">(+ 57) 316 - 521 9867</p>
-      <img class="first-foot-icons" style = "margin-top: 10px;" src="{% static 'mainsite/images/Correo.png' %}" alt="Mail Icon">
-      <p style = "margin-bottom: 0;">exportaciones@eurocarga.com</p>
-      <p style = "margin-top: 0;">gerencia@eurocarga.com</p>
+  <footer class="w3-row-padding w3-padding-32 semitransparent-image-behind-text flex-container"
+    style="color :white; background-color: #1B4A7D;">
+    <div class="w3-third" style="border-right: 1px solid white; width: 60%;">
+      <a href="#" class="w3-bar-item w3-button"><img src="{% static 'mainsite/images/Logo-white.png' %}" width="300"
+          id="toplogo" /></a>
+      <h3 style="font-family: Roboto-Bold;">Contáctanos:</h3>
+
+      <img class="first-foot-icons" style="margin-top: 15px;" src="{% static 'mainsite/images/Telefono.png' %}"
+        alt="Phone Icon">
+      <p style="margin-bottom: 0;">(+ 57) 310 - 424 9299</p>
+      <p style="margin-top: 0;">(+ 57) 316 - 521 9867</p>
+      <img class="first-foot-icons" style="margin-top: 10px;" src="{% static 'mainsite/images/Correo.png' %}"
+        alt="Mail Icon">
+      <p style="margin-bottom: 0;">exportaciones@eurocarga.com</p>
+      <p style="margin-top: 0;">gerencia@eurocarga.com</p>
       <img class="first-foot-icons" src="{% static 'mainsite/images/location.png' %}" alt="Location Icon">
       <p>Carrera 73 # 152 B - 65 Bogotá D.C - Colombia</p>
 
-      
+
     </div>
-  
+
     <div class="" style="text-align: center; border-right: 1px solid white; width: 70%;">
       <h3 style="font-family: Roboto-Bold;">Certificaciones</h3>
-      <p>Nos enorgullece contar con certificaciones de primera categoría que garantizan calidad, seguridad y sostenibilidad.</p>
+      <p>Nos enorgullece contar con certificaciones de primera categoría que garantizan calidad, seguridad y
+        sostenibilidad.</p>
       <div style="display: flex; justify-content: center;">
         <img src="{% static 'mainsite/images/ISO.png' %}" style="width: 25%; height: auto;">
         <img src="{% static 'mainsite/images/IATA.png' %}" style="width: 25%; height: auto;">
       </div>
     </div>
 
-    <div class="w3-third w3-serif  open-sans" >
+    <div class="w3-third w3-serif  open-sans">
       <div style="display: flex; justify-content: space-around;">
         <i class="fa fa-facebook" style="font-size:30px"></i>
         <i class="fa fa-instagram" style="font-size:30px"></i>
@@ -108,30 +123,30 @@
       </div>
       <br>
       <br>
-    
-      <ul style = "font-size: 18px">
-        <li class ="custom-list-item">Inicio</li>
-        <li class ="custom-list-item">Quiénes Somos</li>
-        <li class ="custom-list-item">Servicios</li>
-        <li class ="custom-list-item">Departamentos</li>
-        <li class ="custom-list-item">Oficinas</li>
-        <li class ="custom-list-item">Contáctenos</li>
-        <li class ="custom-list-item">PQRS</li>
+
+      <ul style="font-size: 18px">
+        <li class="custom-list-item">Inicio</li>
+        <li class="custom-list-item">Quiénes Somos</li>
+        <li class="custom-list-item">Servicios</li>
+        <li class="custom-list-item">Departamentos</li>
+        <li class="custom-list-item">Oficinas</li>
+        <li class="custom-list-item">Contáctenos</li>
+        <li class="custom-list-item">PQRS</li>
       </ul>
     </div>
-    
-
-  <p style = "font-family: Raleway-Regular; text-align: center; color :white; background-color: #1B4A7D;">
-    EUROCARGA © 2023 - Todos los derechos reservados | Política de privacidad
-</p>
-
-</footer>
 
 
-    
+    <p style="font-family: Raleway-Regular; text-align: center; color :white; background-color: #1B4A7D;">
+      EUROCARGA © 2023 - Todos los derechos reservados | Política de privacidad
+    </p>
 
-  
-  </body>
+  </footer>
+
+
+
+
+
+</body>
 
 
 </html>
