@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    @font-face {
+        font-family: "Roboto-Regular";
+        src: url("{% static 'mainsite/fonts/Roboto-Regular.ttf' %}") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Roboto-Bold";
+        src: url("{% static 'mainsite/fonts/Roboto-Bold.ttf' %}") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Raleway-Bold";
+        src: url("{% static 'mainsite/fonts/Raleway-Bold.ttf' %}") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Raleway-Regular";
+        src: url("{% static 'mainsite/fonts/Raleway-Regular.ttf' %}") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Open-Sans-Bold";
+        src: url("{% static 'mainsite/fonts/OpenSans-Bold.ttf' %}") format("truetype");
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        color: white;
+        z-index: 1;
+    }
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /* adjust as needed */
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .services-button {
+        color: white;
+        background-color: #4FB4E6;
+    }
+</style>
+
+<div class="image-container" style="z-index: -1;">
+    <img src="{% static 'mainsite/images/horboat.png' %}" alt="header image of a boat">
+    <div class="overlay-text">
+        <p style="font-family: 'Raleway-Bold'; font-size: 60px; margin-bottom: 0px; line-height: 1;">NUESTROS
+        </p>
+        <p
+            style="font-family: 'Raleway-Bold'; font-size: 71px; margin-top: 0px; margin-bottom: 0px; text-decoration: underline; line-height: 1;">
+            SERVICIOS</p>
+        <br><br>
+        <button class="w3-button w3-round-large services-button" style="padding: 15px 30px;">Obtener Cotizacion</button>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: space-between;">
+    <div style="position: relative; width: 25%;">
+        <img style="width: 100%;" src="{% static 'mainsite/images/image1.png' %}" alt="Image 1">
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: blue; opacity: 0.5;">
+        </div>
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">Text 1</p>
+    </div>
+    <div style="position: relative; width: 25%;">
+        <img style="width: 100%;" src="{% static 'mainsite/images/image2.png' %}" alt="Image 2">
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: blue; opacity: 0.5;">
+        </div>
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">Text 2</p>
+    </div>
+    <div style="position: relative; width: 25%;">
+        <img style="width: 100%;" src="{% static 'mainsite/images/image3.png' %}" alt="Image 3">
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: blue; opacity: 0.5;">
+        </div>
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">Text 3</p>
+    </div>
+    <div style="position: relative; width: 25%;">
+        <img style="width: 100%;" src="{% static 'mainsite/images/image4.png' %}" alt="Image 4">
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: blue; opacity: 0.5;">
+        </div>
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">Text 4</p>
+    </div>
+</div>
+{% endblock %}
