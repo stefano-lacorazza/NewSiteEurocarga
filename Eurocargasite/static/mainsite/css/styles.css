@@ -1999,10 +1999,10 @@ a {
   z-index: 1;
 }
 
-.float {
+.wpfloat {
   position: fixed;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   bottom: 40px;
   right: 40px;
   background-color: #25d366;
@@ -2035,8 +2035,13 @@ a {
 }
 
 @font-face {
-  font-family: "Open-Sans-Bold";
+  font-family: "Open-Sans-Regular";
   src: url("{% static 'mainsite/fonts/OpenSans-Bold.ttf' %}") format("truetype");
+}
+
+@font-face {
+  font-family: "Open-Sans-Bold";
+  src: url("{% static 'mainsite/fonts/OpenSans-Regular.ttf' %}") format("truetype");
 }
 
 .semitransparent-image-behind-text {
