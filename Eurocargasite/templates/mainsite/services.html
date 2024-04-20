@@ -70,81 +70,105 @@
     </div>
 </div>
 <div style="display: flex; justify-content: space-between;">
-    <img style="width: 25%;" src="{% static 'mainsite/images/image1.png' %}" alt="Image 1" onclick="plusDivs(1)">
-    <img style="width: 25%;" src="{% static 'mainsite/images/image2.png' %}" alt="Image 2">
-    <img style="width: 25%;" src="{% static 'mainsite/images/image3.png' %}" alt="Image 3">
-    <img style="width: 25%;" src="{% static 'mainsite/images/image4.png' %}" alt="Image 4">
+    <img style="width: 25%;" src="{% static 'mainsite/images/services/land_trans_btn.png' %}" onclick="changeDivs(1)"
+        alt="Land Transportation Image">
+    <img style="width: 25%;" src="{% static 'mainsite/images/services/air_trans_btn.png' %}" onclick="changeDivs(2)"
+        alt="Air Transportation Image">
+    <img style="width: 25%;" src="{% static 'mainsite/images/services/sea_trans_btn.png' %}" onclick="changeDivs(3)"
+        alt="Sea Transportation Image">
+    <img style="width: 25%;" src="{% static 'mainsite/images/services/other_trans_btn.png' %}" onclick="changeDivs(0)"
+        alt="Other Transportation Image">
 </div>
 
 <div class="mySlides w3-container w3-animate-right" style="display: flex; justify-content: space-between;">
-    <div>
+    <div style="display: flex; justify-content: space-between;">
+        <div style="width: 60%;">
 
-        <p>Confía en nosotros para simplificar tus operaciones
-            logísticas y llevar tus productos a todo el mundo.</p>
-        <p>¡Ofrecemos soluciones!
-        </p>
-        <p>En Eurocarga, nos especializamos en ofrecer soluciones de transporte terrestre
-            confiables y eficientes para tus necesidades logísticas.
-        </p>
-        <p>Con una amplia flota de vehículos modernos y un equipo altamente capacitado,
-            garantizamos entregas seguras y puntuales en cada envío. Desde cargas pequeñas
-            hasta cargas pesadas, nuestro servicio de transporte terrestre cubre una amplia
-            gama de rutas y destinos, brindándote la flexibilidad y tranquilidad que necesitas
-            para llevar tu carga a su destino final.</p>
+            <p style="font-size: large;">Confía en nosotros para simplificar tus operaciones
+                logísticas y llevar tus productos a todo el mundo.</p>
 
-    </div>
-    <img style="width: 50%;" src="{% static 'mainsite/images/image1.png' %}" alt="Image 1">
-    <div style="width: 33%;">
-        <p>Nuestro servicio se distingue
-            por su puntualidad, asegurando
-            entregas a tiempo en cada envío</p>
-    </div>
-    <div style="width: 33%;">
-        <p>Priorizamos la seguridad en cada
-            paso del proceso de transporte,
-            garantizando la integridad de tu
-            carga en todo momento
+            <div style="padding-left: 10%; padding-top: 7%;">
+                <p style="font-size: xx-large;">¡Ofrecemos soluciones!</p>
+                <p>En Eurocarga, nos especializamos en ofrecer soluciones de transporte terrestre
+                    confiables y eficientes para tus necesidades logísticas.
+                </p>
+                <p>Con una amplia flota de vehículos modernos y un equipo altamente capacitado,
+                    garantizamos entregas seguras y puntuales en cada envío. Desde cargas pequeñas
+                    hasta cargas pesadas, nuestro servicio de transporte terrestre cubre una amplia
+                    gama de rutas y destinos, brindándote la flexibilidad y tranquilidad que necesitas
+                    para llevar tu carga a su destino final.</p>
+                <a href="#" class="w3-bar-item w3-button">
+                    <button
+                        class="w3-button w3-round-large w3-white shadow-button border: 2px solid black; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">Solicitar
+                        servicio</button>
+                </a>
+            </div>
 
-        </p>
-    </div>
-    <div style="width: 33%;">
-        <p>Nuestra extensa red de rutas nos
-            permite llegar a destinos remotos
-            con facilidad, brindándote acceso
-            a una cobertura geográfica
-            completa
-        </p>
-    </div>
-    <div>
-        <img style="width: 50%;" src="{% static 'mainsite/images/image1.png' %}" alt="Image 1">
-        <p>Servicios especializados</p>
-        <ul style="font-size: 18px; font-family: Open-Sans-Regular;">
-            <li class="custom-list-item">Transporte Terrestre de Cargas Nacionalizadas
-            </li>
-            <li class="custom-list-item">Transportes de carga extra dimensionada</li>
-            <li class="custom-list-item">Operación terrestre multimodal (OTM)</li>
-            <li class="custom-list-item">Despacho por tránsito aduanero (DTA)</li>
-            <li class="custom-list-item">Transporte de contenedores</li>
-            <li class="custom-list-item">Transporte Refrigerado
-            </li>
-            <li class="custom-list-item">Consolidación de carga
-            </li>
-            <li class="custom-list-item">LTL consolidado</li>
-            <li class="custom-list-item">Intermodal</li>
-            <li class="custom-list-item">A granel
-            </li>
-            <li class="custom-list-item">FTL</li>
-        </ul>
 
+
+        </div>
+        <img style="width: 40%;" src="{% static 'mainsite/images/services/blue_truck.png' %}" alt="Blue Truck">
     </div>
+    <div style="display: flex; justify-content: space-between; padding: 7%;">
+        <div style="width: 33%;  padding: 7%;">
+            <img src="{% static 'mainsite/images/services/punct.png' %}" alt="header image of a boat">
+            <p>Nuestro servicio se distingue
+                por su puntualidad, asegurando
+                entregas a tiempo en cada envío</p>
+        </div>
+        <div style="width: 33%; padding: 7%;">
+            <img src="{% static 'mainsite/images/services/security.png' %}" alt="header image of a boat">
+            <p>Priorizamos la seguridad en cada
+                paso del proceso de transporte,
+                garantizando la integridad de tu
+                carga en todo momento
+
+            </p>
+        </div>
+        <div style="width: 33%; padding: 7%;">
+            <img src="{% static 'mainsite/images/services/geo.png' %}" alt="header image of a boat">
+            <p>Nuestra extensa red de rutas nos
+                permite llegar a destinos remotos
+                con facilidad, brindándote acceso
+                a una cobertura geográfica
+                completa
+            </p>
+        </div>
+    </div>
+
+    <divv style="display: flex; justify-content: space-between;">
+        <img style=" width: 50%;" src="{% static 'mainsite/images/services/blue_truck2.png' %}" alt="Image 1">
+        <div>
+            <p>Servicios especializados</p>
+            <ul style="font-size: 18px; font-family: Open-Sans-Regular;">
+                <li class="custom-list-item">Transporte Terrestre de Cargas Nacionalizadas
+                </li>
+                <li class="custom-list-item">Transportes de carga extra dimensionada</li>
+                <li class="custom-list-item">Operación terrestre multimodal (OTM)</li>
+                <li class="custom-list-item">Despacho por tránsito aduanero (DTA)</li>
+                <li class="custom-list-item">Transporte de contenedores</li>
+                <li class="custom-list-item">Transporte Refrigerado
+                </li>
+                <li class="custom-list-item">Consolidación de carga
+                </li>
+                <li class="custom-list-item">LTL consolidado</li>
+                <li class="custom-list-item">Intermodal</li>
+                <li class="custom-list-item">A granel
+                </li>
+                <li class="custom-list-item">FTL</li>
+            </ul>
+        </div>
+
+
+</div>
 
 </div>
 
 
 <div class="mySlides w3-container w3-xlarge w3-white w3-card-4 w3-animate-right"
     style="display: flex; justify-content: space-between;">
-    <img style="width: 50%;" src="{% static 'mainsite/images/image1.png' %}" alt="Image 1">
-    <div style="width: 50%;">
+    <img style="width: 40%;" src="{% static 'mainsite/images/services/plane.png' %}" alt="Plane">
+    <div style="width: 60%;">
         <p>Alcance global en tus manos</p>
         <p>Nuestro servicio de flete aéreo te ofrece la velocidad, confiabilidad y
             alcance global que necesitas para llevar tus envíos a nuevas alturas.
@@ -174,6 +198,9 @@
 
     function plusDivs(n) {
         showDivs(slideIndex += n);
+    }
+    function changeDivs(n) {
+        showDivs(slideIndex = n);
     }
 
     function currentDiv(n) {
