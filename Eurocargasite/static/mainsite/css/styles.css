@@ -2095,3 +2095,11 @@ a {
   /* Adjust this value as needed */
   list-style-type: none;
 }
+
+.shadow-button {
+  color: #1B4A7D;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  font-family: 'Open-Sans-Bold';
+}
