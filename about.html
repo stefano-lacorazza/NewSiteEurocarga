@@ -2,18 +2,17 @@
 <html lang="en">
 
 <head>
-    {% load static %}
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/icons/favicon.ico' %}">
+    <title>Nosotros - Eurocarga</title>
+    <link rel="icon" type="image/x-icon" href="static/images/icons/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{% static 'mainsite/css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <style>
     .custom-list-item {
-        background-image: url("{% static 'mainsite/images/22.png' %}");
+        background-image: url("static/images/22.png");
         background-size: auto 15px;
         /* This will set the height of the image to 5px and adjust the width to maintain the aspect ratio */
         background-position: left center;
@@ -25,11 +24,11 @@
 
     @font-face {
         font-family: "Open-Sans-Regular";
-        src: url("{% static 'mainsite/fonts/OpenSans-Regular.ttf' %}") format("truetype");
+        src: url("static/fonts/OpenSans-Regular.ttf") format("truetype");
     }
 
     .semitransparent-image-behind-text {
-        background-image: url("{% static 'mainsite/images/21.png' %}");
+        background-image: url("static/images/21.png");
         background-repeat: no-repeat;
         background-position: right;
     }
@@ -45,52 +44,47 @@
     <!-- Navbar (sit on top) -->
     <div class="" style=" position: absolute; top: 0; width: 100%;">
         <div class="w3-bar" id="myNavbar" style="padding-top: 20px;">
-            <a href="#" class="w3-bar-item w3-button"><img src="{% static 'mainsite/images/Logo-white.png' %}"
-                    width="300" id="toplogo" /></a>
+            <a href="#" class="w3-bar-item w3-button"><img src="static/images/Logo-white.png" width="300"
+                    id="toplogo" /></a>
             <!-- Right-sided navbar links -->
             <div class="w3-right w3-hide-small" style="padding-top: 20px; font-size: 20px;">
-                <a href="{% url 'index' %}" class="w3-bar-item w3-button topbaritem"
-                    style="padding-top: 20px;">INICIO</a>
+                <a href="index.html" class="w3-bar-item w3-button topbaritem" style="padding-top: 20px;">INICIO</a>
                 <div class="w3-dropdown-hover w3-hide-small">
-                    <a href="{% url 'about' %}" class="w3-button w3-hide-small topbaritem"
-                        style="padding-top: 20px;"><b> QUIÉNES
+                    <a href="about.html" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b>
+                            QUIÉNES
                             SOMOS</b> <i class="fa fa-caret-down"></i></a>
                     <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-                        <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-round-large topbaritem">Valores como
+                        <a href="about.html" class="w3-bar-item w3-button w3-round-large topbaritem">Valores como
                             Empresa</a>
-                        <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-round-large topbaritem">Misión y
+                        <a href="about.html" class="w3-bar-item w3-button w3-round-large topbaritem">Misión y
                             Visión</a>
                     </div>
                 </div>
                 <div class="w3-dropdown-hover w3-hide-small">
-                    <a href="{% url 'services' %}" class="w3-button w3-hide-small topbaritem"
-                        style="padding-top: 20px;"><b>
+                    <a href="services.html" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b>
                             SERVICIOS</b> <i class="fa fa-caret-down"></i></a>
                     <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-                        <a href="{% url 'services' %}"
-                            class="w3-bar-item w3-button w3-round-large topbaritem">Transporte
+                        <a href="services.html" class="w3-bar-item w3-button w3-round-large topbaritem">Transporte
                             terrestre</a>
-                        <a href="{% url 'services' %}" class="w3-bar-item w3-button topbaritem">Flete Marítimo</a>
-                        <a href="{% url 'services' %}" class="w3-bar-item w3-button topbaritem">Flete Aéreo</a>
-                        <a href="{% url 'services' %}" class="w3-bar-item w3-button w3-round-large topbaritem">Otros
+                        <a href="services.html" class="w3-bar-item w3-button topbaritem">Flete Marítimo</a>
+                        <a href="services.html" class="w3-bar-item w3-button topbaritem">Flete Aéreo</a>
+                        <a href="services.html" class="w3-bar-item w3-button w3-round-large topbaritem">Otros
                             Servicios</a>
                     </div>
                 </div>
                 <div class="w3-dropdown-hover w3-hide-small">
-                    <a href="{% url 'team' %}" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b>
+                    <a href="team.html" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b>
                             DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>
                     <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-                        <a href="{% url 'team' %}"
-                            class="w3-bar-item w3-button w3-round-large topbaritem">Importación</a>
-                        <a href="{% url 'team' %}" class="w3-bar-item w3-button topbaritem">Exportación</a>
-                        <a href="{% url 'team' %}"
-                            class="w3-bar-item w3-button w3-round-large topbaritem">Contabilidad</a>
+                        <a href="team.html" class="w3-bar-item w3-button w3-round-large topbaritem">Importación</a>
+                        <a href="team.html" class="w3-bar-item w3-button topbaritem">Exportación</a>
+                        <a href="team.html" class="w3-bar-item w3-button w3-round-large topbaritem">Contabilidad</a>
                     </div>
                 </div>
                 <a href="#contact" class="w3-bar-item w3-button"><button
                         class="w3-button w3-round-xlarge w3-white contact-button">Contáctenos</button></a>
                 <button class="w3-button over-navbar-button" style="font-family: Raleway-Regular;"><img
-                        src="{% static 'mainsite/images/icons/colombia.png' %}" style="height: 20px; ">ES<i
+                        src="static/images/icons/colombia.png" style="height: 20px; ">ES<i
                         class="fa fa-caret-down"></i></button>
             </div>
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -110,19 +104,18 @@
         style="color :white; background-color: #1B4A7D;  position: relative;">
 
         <div class="w3-third" style="border-right: 2px solid white; width: 60%;">
-            <a href="#" class="w3-bar-item w3-button"><img src="{% static 'mainsite/images/Logo-white.png' %}"
-                    width="300" id="toplogo" /></a>
+            <a href="#" class="w3-bar-item w3-button"><img src="static/images/Logo-white.png" width="300"
+                    id="toplogo" /></a>
             <h3 style="font-family: Roboto-Bold;">Contáctanos:</h3>
             <div style="font-family: Open-Sans-Regular;">
-                <img class="first-foot-icons" style="margin-top: 15px;"
-                    src="{% static 'mainsite/images/Telefono.png' %}" alt="Phone Icon">
+                <img class="first-foot-icons" style="margin-top: 15px;" src="static/images/Telefono.png"
+                    alt="Phone Icon">
                 <p style="margin-bottom: 0; ">(+ 57) 310 - 424 9299</p>
                 <p style="margin-top: 0;">(+ 57) 316 - 521 9867</p>
-                <img class="first-foot-icons" style="margin-top: 10px;" src="{% static 'mainsite/images/Correo.png' %}"
-                    alt="Mail Icon">
+                <img class="first-foot-icons" style="margin-top: 10px;" src="static/images/Correo.png" alt="Mail Icon">
                 <p style="margin-bottom: 0;">exportaciones@eurocarga.com</p>
                 <p style="margin-top: 0;">gerencia@eurocarga.com</p>
-                <img class="first-foot-icons" src="{% static 'mainsite/images/location.png' %}" alt="Location Icon">
+                <img class="first-foot-icons" src="static/images/location.png" alt="Location Icon">
                 <p>Carrera 73 # 152 B - 65 Bogotá D.C - Colombia</p>
             </div>
 
@@ -133,8 +126,8 @@
             <p>Nos enorgullece contar con certificaciones de primera categoría que garantizan calidad, seguridad y
                 sostenibilidad.</p>
             <div style="display: flex; justify-content: center;">
-                <img src="{% static 'mainsite/images/ISO.png' %}" style="width: 25%; height: auto;">
-                <img src="{% static 'mainsite/images/IATA.png' %}" style="width: 25%; height: auto;">
+                <img src="static/images/ISO.png" style="width: 25%; height: auto;">
+                <img src="static/images/IATA.png" style="width: 25%; height: auto;">
             </div>
         </div>
 
@@ -181,27 +174,27 @@
 <style>
     @font-face {
         font-family: "Roboto-Regular";
-        src: url("{% static 'mainsite/fonts/Roboto-Regular.ttf' %}") format("truetype");
+        src: url("static/fonts/Roboto-Regular.ttf") format("truetype");
     }
 
     @font-face {
         font-family: "Roboto-Bold";
-        src: url("{% static 'mainsite/fonts/Roboto-Bold.ttf' %}") format("truetype");
+        src: url("static/fonts/Roboto-Bold.ttf") format("truetype");
     }
 
     @font-face {
         font-family: "Raleway-Bold";
-        src: url("{% static 'mainsite/fonts/Raleway-Bold.ttf' %}") format("truetype");
+        src: url("static/fonts/Raleway-Bold.ttf") format("truetype");
     }
 
     @font-face {
         font-family: "Raleway-Regular";
-        src: url("{% static 'mainsite/fonts/Raleway-Regular.ttf' %}") format("truetype");
+        src: url("static/fonts/Raleway-Regular.ttf") format("truetype");
     }
 
     @font-face {
         font-family: "Open-Sans-Bold";
-        src: url("{% static 'mainsite/fonts/OpenSans-Bold.ttf' %}") format("truetype");
+        src: url("static/fonts/OpenSans-Bold.ttf") format("truetype");
     }
 
 
@@ -262,7 +255,7 @@
     }
 
     .space-background {
-        background-image: url("{% static 'mainsite/images/space1.png' %}");
+        background-image: url("static/images/space1.png");
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -275,7 +268,7 @@
 </style>
 
 <div class="image-container" style="z-index: -1;">
-    <img src="{% static 'mainsite/images/horboat.png' %}" alt="header image of a boat">
+    <img src="static/images/horboat.png" alt="header image of a boat">
     <div class="overlay-text">
         <p
             style="font-family: 'Raleway-Bold'; font-size: 65px; margin-top: 0px; margin-bottom: 0px; text-decoration: underline; line-height: 1;">
@@ -288,7 +281,7 @@
 </div>
 
 <div style="display: flex; align-items: center;">
-    <img src="{% static 'mainsite/images/imagebox.png' %}" alt="Man carrying box" style="height: 500px;">
+    <img src="static/images/imagebox.png" alt="Man carrying box" style="height: 500px;">
     <div style="padding: 5%; font-size: 20px; font-family: Raleway-Regular;">
         <p style="color: #417FC2;"><strong>Somos tu agencia de carga internacional</strong>, especializados en
             simplificar y optimizar operaciones logísticas a nivel global.
@@ -308,7 +301,7 @@
 <div class="space-background">
     <div class="container" style="display: flex;  justify-content: space-between;  padding: 100px;">
 
-        <img src="{% static 'mainsite/images/values-image.png' %}" alt="Image 1" style="width: 100%;">
+        <img src="static/images/values-image.png" alt="Image 1" style="width: 100%;">
 
     </div>
 
@@ -316,7 +309,7 @@
         <div>
             <div class="rectangle">
                 <div style="display: flex; align-items: center;  padding: 4%; padding-bottom: 0;">
-                    <img style="width: 10%;" src="{% static 'mainsite/images/mision.png' %}" alt="Image mision">
+                    <img style="width: 10%;" src="static/images/mision.png" alt="Image mision">
                     <p style="color: white; margin-left: 10px;">Misión</p>
                 </div>
                 <p style=" opacity: 0; transition: opacity 0.5s;  padding: 4%;  padding-top: 0;color:white">Sostener un
@@ -333,7 +326,7 @@
             </div>
             <div class="rectangle">
                 <div style="display: flex; align-items: center; padding: 4%; padding-bottom: 0;">
-                    <img style="width: 10%; " src="{% static 'mainsite/images/vision.png' %}" alt="Image mision">
+                    <img style="width: 10%; " src="static/images/vision.png" alt="Image mision">
                     <p style="color: white; margin-left: 10px; ">Visión</p>
                 </div>
 
@@ -347,7 +340,7 @@
             </div>
             <div class="rectangle">
                 <div style="display: flex; align-items: center;  padding: 4%; padding-bottom: 0;">
-                    <img style="width: 10%;" src="{% static 'mainsite/images/Objetivos.png' %}" alt="Image mision">
+                    <img style="width: 10%;" src="static/images/Objetivos.png" alt="Image mision">
                     <p style="color: white; margin-left: 10px;">Objetivos</p>
                 </div>
 
@@ -361,7 +354,7 @@
         </div>
         <div class="miviimage-container">
             <video autoplay loop id="vid" muted width="100%">
-                <source src="{% static 'mainsite/videos/half-earth.mp4' %}" type="video/mp4">
+                <source src="static/videos/half-earth.mp4" type="video/mp4">
             </video>
         </div>
     </div>
@@ -376,7 +369,7 @@
 
 
     <div style="position: relative;">
-        <img src="{% static 'mainsite/images/truck.png' %}" alt="A truck" style="width: 100%;">
+        <img src="static/images/truck.png" alt="A truck" style="width: 100%;">
         <div style="position: absolute; top: 0%; left: 75%;">
             <p style=" font-size: 40px;">Desde <span style="color: #1B4A7D;">1983</span></p>
             <p style="font-size: 20px; font-family: Roboto-Regular;"><span style="color: #1B4A7D;">EUROCARGA </span>ha
