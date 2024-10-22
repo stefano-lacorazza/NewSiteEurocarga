@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    {% load static %}
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/icons/favicon.ico' %}">
+
+    <title>Servicios - Eurocarga</title>
+    <link rel="icon" type="image/x-icon" href="static/images/icons/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{% static 'mainsite/css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <style>
     .custom-list-item {
-        background-image: url("{% static 'mainsite/images/22.png' %}");
+        background-image: url("static/images/22.png");
         background-size: auto 15px;
         /* This will set the height of the image to 5px and adjust the width to maintain the aspect ratio */
         background-position: left center;
@@ -25,11 +25,11 @@
 
     @font-face {
         font-family: "Open-Sans-Regular";
-        src: url("{% static 'mainsite/fonts/OpenSans-Regular.ttf' %}") format("truetype");
+        src: url("static/fonts/OpenSans-Regular.ttf") format("truetype");
     }
 
     .semitransparent-image-behind-text {
-        background-image: url("{% static 'mainsite/images/21.png' %}");
+        background-image: url("static/images/21.png");
         background-repeat: no-repeat;
         background-position: right;
     }
@@ -45,52 +45,47 @@
     <!-- Navbar (sit on top) -->
     <div class="" style=" position: absolute; top: 0; width: 100%;">
         <div class="w3-bar" id="myNavbar" style="padding-top: 20px;">
-            <a href="#" class="w3-bar-item w3-button"><img src="{% static 'mainsite/images/Logo-white.png' %}"
-                    width="300" id="toplogo" /></a>
+            <a href="#" class="w3-bar-item w3-button"><img src="static/images/Logo-white.png" width="300"
+                    id="toplogo" /></a>
             <!-- Right-sided navbar links -->
             <div class="w3-right w3-hide-small" style="padding-top: 20px; font-size: 20px;">
-                <a href="{% url 'index' %}" class="w3-bar-item w3-button topbaritem"
-                    style="padding-top: 20px;">INICIO</a>
+                <a href="index.html" class="w3-bar-item w3-button topbaritem" style="padding-top: 20px;">INICIO</a>
                 <div class="w3-dropdown-hover w3-hide-small">
-                    <a href="{% url 'about' %}" class="w3-button w3-hide-small topbaritem"
-                        style="padding-top: 20px;"><b> QUIÉNES
+                    <a href="about.html" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b>
+                            QUIÉNES
                             SOMOS</b> <i class="fa fa-caret-down"></i></a>
                     <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-                        <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-round-large topbaritem">Valores como
+                        <a href="about.html" class="w3-bar-item w3-button w3-round-large topbaritem">Valores como
                             Empresa</a>
-                        <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-round-large topbaritem">Misión y
+                        <a href="about.html" class="w3-bar-item w3-button w3-round-large topbaritem">Misión y
                             Visión</a>
                     </div>
                 </div>
                 <div class="w3-dropdown-hover w3-hide-small">
-                    <a href="{% url 'services' %}" class="w3-button w3-hide-small topbaritem"
-                        style="padding-top: 20px;"><b>
+                    <a href="services.html" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b>
                             SERVICIOS</b> <i class="fa fa-caret-down"></i></a>
                     <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-                        <a href="{% url 'services' %}"
-                            class="w3-bar-item w3-button w3-round-large topbaritem">Transporte
+                        <a href="services.html" class="w3-bar-item w3-button w3-round-large topbaritem">Transporte
                             terrestre</a>
-                        <a href="{% url 'services' %}" class="w3-bar-item w3-button topbaritem">Flete Marítimo</a>
-                        <a href="{% url 'services' %}" class="w3-bar-item w3-button topbaritem">Flete Aéreo</a>
-                        <a href="{% url 'services' %}" class="w3-bar-item w3-button w3-round-large topbaritem">Otros
+                        <a href="services.html" class="w3-bar-item w3-button topbaritem">Flete Marítimo</a>
+                        <a href="services.html" class="w3-bar-item w3-button topbaritem">Flete Aéreo</a>
+                        <a href="services.html" class="w3-bar-item w3-button w3-round-large topbaritem">Otros
                             Servicios</a>
                     </div>
                 </div>
                 <div class="w3-dropdown-hover w3-hide-small">
-                    <a href="{% url 'team' %}" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b>
+                    <a href="team.html" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b>
                             DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>
                     <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-                        <a href="{% url 'team' %}"
-                            class="w3-bar-item w3-button w3-round-large topbaritem">Importación</a>
-                        <a href="{% url 'team' %}" class="w3-bar-item w3-button topbaritem">Exportación</a>
-                        <a href="{% url 'team' %}"
-                            class="w3-bar-item w3-button w3-round-large topbaritem">Contabilidad</a>
+                        <a href="team.html" class="w3-bar-item w3-button w3-round-large topbaritem">Importación</a>
+                        <a href="team.html" class="w3-bar-item w3-button topbaritem">Exportación</a>
+                        <a href="team.html" class="w3-bar-item w3-button w3-round-large topbaritem">Contabilidad</a>
                     </div>
                 </div>
                 <a href="#contact" class="w3-bar-item w3-button"><button
                         class="w3-button w3-round-xlarge w3-white contact-button">Contáctenos</button></a>
                 <button class="w3-button over-navbar-button" style="font-family: Raleway-Regular;"><img
-                        src="{% static 'mainsite/images/icons/colombia.png' %}" style="height: 20px; ">ES<i
+                        src="static/images/icons/colombia.png" style="height: 20px; ">ES<i
                         class="fa fa-caret-down"></i></button>
             </div>
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -103,26 +98,396 @@
     </div>
 
 
+    <div class="image-container" style="z-index: -1;">
+        <img src="static/images/horboat.png" alt="header image of a boat">
+        <div class="overlay-text">
+            <p style="font-family: 'Raleway-Bold'; font-size: 80px; margin-bottom: 0px; line-height: 1;">NUESTROS
+            </p>
+            <p
+                style="font-family: 'Raleway-Bold'; font-size: 91px; margin-top: 0px; margin-bottom: 0px; text-decoration: underline; line-height: 1;">
+                SERVICIOS</p>
+            <button class="w3-button w3-round-xlarge services-button"
+                style="padding: 15px 30px; font-family: Open-Sans-Bold; font-size: 20px;">Obtener Cotización</button>
 
+        </div>
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+        <img style="width: 25%;" src="static/images/services/land_trans_btn.png" onclick="changeDivs(1)"
+            alt="Land Transportation Image">
+        <img style="width: 25%;" src="static/images/services/air_trans_btn.png" onclick="changeDivs(2)"
+            alt="Air Transportation Image">
+        <img style="width: 25%;" src="static/images/services/sea_trans_btn.png" onclick="changeDivs(3)"
+            alt="Sea Transportation Image">
+        <img style="width: 25%;" src="static/images/services/other_trans_btn.png" onclick="changeDivs(0)"
+            alt="Other Transportation Image">
+    </div>
+
+    <div class="mySlides w3-container w3-animate-right" style="display: flex; justify-content: space-between;">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 60%;">
+
+                <p style="font-size: large;">Confía en nosotros para simplificar tus operaciones
+                    logísticas y llevar tus productos a todo el mundo.</p>
+
+                <div style="padding-left: 10%; padding-top: 7%;">
+                    <p style="font-size: xx-large;">¡Ofrecemos soluciones!</p>
+                    <p>En Eurocarga, nos especializamos en ofrecer soluciones de transporte terrestre
+                        confiables y eficientes para tus necesidades logísticas.
+                    </p>
+                    <p>Con una amplia flota de vehículos modernos y un equipo altamente capacitado,
+                        garantizamos entregas seguras y puntuales en cada envío. Desde cargas pequeñas
+                        hasta cargas pesadas, nuestro servicio de transporte terrestre cubre una amplia
+                        gama de rutas y destinos, brindándote la flexibilidad y tranquilidad que necesitas
+                        para llevar tu carga a su destino final.</p>
+                    <a href="#" class="w3-bar-item w3-button">
+                        <button
+                            class="w3-button w3-round-large w3-white shadow-button border: 2px solid black; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">Solicitar
+                            servicio</button>
+                    </a>
+                </div>
+            </div>
+            <img style="width: 40%;" src="static/images/services/blue_truck.png" alt="Blue Truck">
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 7%;">
+            <div style="width: 33%;  padding: 7%;">
+                <img src="static/images/services/punct.png" alt="header image of a boat">
+                <p>Nuestro servicio se distingue
+                    por su puntualidad, asegurando
+                    entregas a tiempo en cada envío</p>
+            </div>
+            <div style="width: 33%; padding: 7%;">
+                <img src="static/images/services/security.png" alt="header image of a boat">
+                <p>Priorizamos la seguridad en cada
+                    paso del proceso de transporte,
+                    garantizando la integridad de tu
+                    carga en todo momento
+
+                </p>
+            </div>
+            <div style="width: 33%; padding: 7%;">
+                <img src="static/images/services/geo.png" alt="header image of a boat">
+                <p>Nuestra extensa red de rutas nos
+                    permite llegar a destinos remotos
+                    con facilidad, brindándote acceso
+                    a una cobertura geográfica
+                    completa
+                </p>
+            </div>
+        </div>
+
+        <divv style="display: flex; justify-content: space-between;">
+            <img style=" width: 50%;" src="static/images/services/blue_truck2.png" alt="Image 1">
+            <div>
+                <p>Servicios especializados</p>
+                <ul style="font-size: 18px; font-family: Open-Sans-Regular;">
+                    <li class="custom-list-item">Transporte Terrestre de Cargas Nacionalizadas
+                    </li>
+                    <li class="custom-list-item">Transportes de carga extra dimensionada</li>
+                    <li class="custom-list-item">Operación terrestre multimodal (OTM)</li>
+                    <li class="custom-list-item">Despacho por tránsito aduanero (DTA)</li>
+                    <li class="custom-list-item">Transporte de contenedores</li>
+                    <li class="custom-list-item">Transporte Refrigerado
+                    </li>
+                    <li class="custom-list-item">Consolidación de carga
+                    </li>
+                    <li class="custom-list-item">LTL consolidado</li>
+                    <li class="custom-list-item">Intermodal</li>
+                    <li class="custom-list-item">A granel
+                    </li>
+                    <li class="custom-list-item">FTL</li>
+                </ul>
+            </div>
+
+
+    </div>
+
+    </div>
+
+    <div class="mySlides w3-container w3-animate-right" style="display: flex; justify-content: space-between;">
+        <div style="display: flex; justify-content: space-between;">
+            <img style="width: 40%;" src="static/images/services/plane.png" alt="Plane Image">
+            <div style="width: 60%; text-align: right;">
+
+                <p>Alcance global en tus manos</p>
+                <p>Nuestro servicio de flete aéreo te ofrece la velocidad, confiabilidad y
+                    alcance global que necesitas para llevar tus envíos a nuevas alturas.
+                </p>
+                <p>Desde entregas urgentes hasta envíos internacionales, nuestro equipo
+                    experto se encarga de cada detalle, garantizando que tu carga llegue a su
+                    destino final de manera segura y puntual. Confía en Eurocarga para tus
+                    necesidades de transporte aéreo en importación y exportación.
+                    Descubre cómo podemos hacer despegar tu negocio
+                </p>
+                <a href="#" class="w3-bar-item w3-button">
+                    <button
+                        class="w3-button w3-round-large w3-white shadow-button border: 2px solid black; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">Solicitar
+                        servicio</button>
+                </a>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+
+            <p>
+                Con aliados de confianza las
+                tarifas competitivas son
+                nuestra garantía
+            </p>
+
+
+            <img style="width: 40%;" src="static/images/services/plane_front.png" alt="Plane Image">
+        </div>
+
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <p>
+                    Con Eurocarga,
+                </p>
+                <p>
+                    El cielo no es el límite: es solo
+                    el comienzo de tu éxito
+                </p>
+                <a href="#" class="w3-bar-item w3-button">
+                    <button
+                        class="w3-button w3-round-large w3-white shadow-button border: 2px solid black; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">Comienza
+                        ahora</button>
+                </a>
+
+            </div>
+            <div>
+                <p>Servicios especializados</p>
+                <ul style="font-size: 18px; font-family: Open-Sans-Regular;">
+                    <li class="custom-list-item">Logística especial para mercancía peligrosa
+                    </li>
+                    <li class="custom-list-item">Transporte de carga Sobredimensionada</li>
+                    <li class="custom-list-item">Transporte de cargas refrigeradas
+                    </li>
+                    <li class="custom-list-item">Intermodal / multimodal</li>
+                    <li class="custom-list-item">Consolidación de carga</li>
+
+                </ul>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="display: flex; justify-content: space-between;">
+                <img style="width: 30%;" src="static/images/services/trans_rapido.png" alt="Plane Image">
+                <div>
+                    <p>
+                        Tránsitos rápidos
+                    </p>
+                    <p>
+                        Nuestro flete aéreo garantiza
+                        entregas rápidas, minimizando
+                        los tiempos de espera y
+                        satisfaciendo las necesidades
+                        de entrega urgente
+
+                    </p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <img style="width: 30%;" src="static/images/services/seguridad.png" alt="Plane Image">
+                <div>
+                    <p>
+                        Seguridad
+                    </p>
+                    <p>
+                        Priorizamos la seguridad de tu
+                        carga, con estrictos controles y
+                        monitoreo constante durante
+                        todo el proceso de envío
+
+
+                    </p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <img style="width: 30%;" src="static/images/services/flexibilidad.png" alt="Plane Image">
+                <div>
+                    <p>
+                        Flexibilidad Adaptada
+
+                    </p>
+                    <p>
+                        Ofrecemos opciones de vuelos y
+                        rutas flexibles para adaptarnos a
+                        tus necesidades, permitiéndote
+                        cumplir con los plazos de
+                        entrega de manera eficaz
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="mySlides w3-container w3-xlarge w3-white w3-card-4 w3-animate-right">
+        <div style="display: flex; justify-content: space-between;">
+            <img style="width: 40%;" src="static/images/services/boat.png" alt="Boat Image">
+            <div style="width: 60%; text-align: right;">
+
+                <p>Tu carga navegará hacia el éxito</p>
+                <p>Desde contenedores completos hasta carga consolidada, nuestra
+                    amplia red de rutas y asociaciones estratégicas garantiza que tu carga
+                    llegue a su destino de manera eficiente y sin contratiempos.
+                </p>
+                <p>Confía en nosotros para simplificar tus importaciones o exportaciones
+                    marítimas y llevar tu negocio a nuevas fronteras.
+
+                </p>
+                <a href="#" class="w3-bar-item w3-button">
+                    <button
+                        class="w3-button w3-round-large w3-white shadow-button border: 2px solid black; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">Solicitar
+                        servicio</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mySlides w3-container w3-xlarge w3-white w3-card-4 w3-animate-right">
+        <div style="display: flex; justify-content: space-between;">
+            <img style="width: 40%;" src="static/images/services/other_services.png" alt="Arms Image">
+            <div style="width: 60%; text-align: right;">
+
+                <p>Otros Servicios</p>
+                <p>Descubre nuestra amplia gama de servicios de logística y aduanales.
+                    Ofrecemos soluciones integrales para tus necesidades de envío.
+                    ¡Confía en nosotros para simplificar tus operaciones logísticas y llevar
+                    tu carga a cualquier parte del mundo con eficiencia y profesionalismo!
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <p style="text-align: center;">Tipos de Carga</p>
+
+
+        <div class="CargoSlides w3-container w3-animate-right;"
+            style="display: flex; justify-content: space-between; position: relative;">
+            <div
+                style="display: flex; justify-content: space-between; margin-left: 25%; margin-right: 25%; padding-top: 2%; padding-bottom: 2%; border: 4px solid lightblue;">
+                <img style="position: absolute; bottom: 0; left: 20%; z-index: 4;"
+                    src="static/images/services/left_btn.png" onclick="lessCargoDivs(1)">
+                <img style="width: 30%; position: relative; left: -100px;"
+                    src="static/images/services/carga_general.png" alt="Plane Image">
+                <div>
+                    <p>
+                        CARGA GENERAL
+
+                    </p>
+                    <p>
+                        Desde textiles hasta productos
+                        electrónicos, nuestra capacidad de
+                        transporte de carga general abarca una
+                        amplia variedad de mercancías no
+                        especializadas, ofreciendo soluciones
+                        logísticas flexibles para tus necesidades
+                        de envío estándar.
+
+
+                    </p>
+                    <p>
+                        CONOCE TU TIPO DE CARGA
+
+                    </p>
+                </div>
+                <img style="position: absolute; top: 0; right: 20%; z-index: 4"
+                    src="static/images/services/right_btn.png" onclick="plusCargoDivs(1)" alt="right_btn">
+            </div>
+        </div>
+
+
+        <div class="CargoSlides w3-container w3-animate-right;"
+            style="display: flex; justify-content: space-between; position: relative;">
+            <div
+                style="display: flex; justify-content: space-between; margin-left: 25%; margin-right: 25%; padding-top: 2%; padding-bottom: 2%; border: 4px solid lightblue;">
+                <img style="position: absolute; bottom: 0; left: 20%;" src="static/images/services/left_btn.png"
+                    onclick="lessCargoDivs(1)">
+                <img style="width: 30%; position: relative; left: -100px;" src="static/images/services/oversize.png"
+                    alt="Plane Image">
+                <div>
+                    <p>
+                        CARGA PESADA/OVERSIZE
+                    </p>
+                    <p>
+                        Con nuestra experiencia en el transporte
+                        de carga pesada y de gran tamaño,
+                        podemos manejar eficientemente
+                        productos de dimensiones y pesos
+                        excepcionales, proporcionando
+                        soluciones de transporte adaptadas a
+                        tus necesidades específicas.
+
+
+                    </p>
+                    <p>
+                        CONOCE TU TIPO DE CARGA
+
+                    </p>
+                </div>
+                <img style="position: absolute; top: 0; right: 20%;" src="static/images/services/right_btn.png"
+                    onclick="plusCargoDivs(1)">
+            </div>
+        </div>
+
+
+        <div class="CargoSlides w3-container w3-animate-right;"
+            style="display: flex; justify-content: space-between; position: relative;">
+            <div
+                style="display: flex; justify-content: space-between; margin-left: 25%; margin-right: 25%; padding-top: 2%; padding-bottom: 2%; border: 4px solid lightblue;">
+                <img style="position: absolute; bottom: 0; left: 20%;" src="static/images/services/left_btn.png"
+                    onclick="lessCargoDivs(1)">
+                <img style="width: 30%; position: relative; left: -100px;" src="static/images/services/danger.png"
+                    alt="Plane Image">
+                <div>
+                    <p>
+                        CARGA PELIGROSA
+
+                    </p>
+                    <p>
+                        Nuestro equipo especializado en carga peligrosa
+                        garantiza el transporte seguro y conforme de
+                        productos químicos, materiales inflamables y
+                        otros productos clasificados como peligrosos,
+                        cumpliendo con los más altos estándares de
+                        seguridad y normativas internacionales.
+
+
+                    </p>
+                    <p>
+                        CONOCE TU TIPO DE CARGA
+
+                    </p>
+                </div>
+                <img style="position: absolute; top: 0; right: 20%;" src="static/images/services/right_btn.png"
+                    onclick="plusCargoDivs(1)">
+            </div>
+        </div>
+
+
+    </div>
 
     <!-- Footer -->
     <footer class="w3-row-padding w3-padding-32 semitransparent-image-behind-text flex-container"
         style="color :white; background-color: #1B4A7D;  position: relative;">
 
         <div class="w3-third" style="border-right: 2px solid white; width: 60%;">
-            <a href="#" class="w3-bar-item w3-button"><img src="{% static 'mainsite/images/Logo-white.png' %}"
-                    width="300" id="toplogo" /></a>
+            <a href="#" class="w3-bar-item w3-button"><img src="static/images/Logo-white.png" width="300"
+                    id="toplogo" /></a>
             <h3 style="font-family: Roboto-Bold;">Contáctanos:</h3>
             <div style="font-family: Open-Sans-Regular;">
-                <img class="first-foot-icons" style="margin-top: 15px;"
-                    src="{% static 'mainsite/images/Telefono.png' %}" alt="Phone Icon">
+                <img class="first-foot-icons" style="margin-top: 15px;" src="static/images/Telefono.png"
+                    alt="Phone Icon">
                 <p style="margin-bottom: 0; ">(+ 57) 310 - 424 9299</p>
                 <p style="margin-top: 0;">(+ 57) 316 - 521 9867</p>
-                <img class="first-foot-icons" style="margin-top: 10px;" src="{% static 'mainsite/images/Correo.png' %}"
-                    alt="Mail Icon">
+                <img class="first-foot-icons" style="margin-top: 10px;" src="static/images/Correo.png" alt="Mail Icon">
                 <p style="margin-bottom: 0;">exportaciones@eurocarga.com</p>
                 <p style="margin-top: 0;">gerencia@eurocarga.com</p>
-                <img class="first-foot-icons" src="{% static 'mainsite/images/location.png' %}" alt="Location Icon">
+                <img class="first-foot-icons" src="static/images/location.png" alt="Location Icon">
                 <p>Carrera 73 # 152 B - 65 Bogotá D.C - Colombia</p>
             </div>
 
@@ -133,8 +498,8 @@
             <p>Nos enorgullece contar con certificaciones de primera categoría que garantizan calidad, seguridad y
                 sostenibilidad.</p>
             <div style="display: flex; justify-content: center;">
-                <img src="{% static 'mainsite/images/ISO.png' %}" style="width: 25%; height: auto;">
-                <img src="{% static 'mainsite/images/IATA.png' %}" style="width: 25%; height: auto;">
+                <img src="static/images/ISO.png" style="width: 25%; height: auto;">
+                <img src="static/images/IATA.png" style="width: 25%; height: auto;">
             </div>
         </div>
 
@@ -202,27 +567,27 @@
 
     @font-face {
         font-family: "Roboto-Regular";
-        src: url("{% static 'mainsite/fonts/Roboto-Regular.ttf' %}") format("truetype");
+        src: url("static/fonts/Roboto-Regular.ttf") format("truetype");
     }
 
     @font-face {
         font-family: "Roboto-Bold";
-        src: url("{% static 'mainsite/fonts/Roboto-Bold.ttf' %}") format("truetype");
+        src: url("static/fonts/Roboto-Bold.ttf") format("truetype");
     }
 
     @font-face {
         font-family: "Raleway-Bold";
-        src: url("{% static 'mainsite/fonts/Raleway-Bold.ttf' %}") format("truetype");
+        src: url("static/fonts/Raleway-Bold.ttf") format("truetype");
     }
 
     @font-face {
         font-family: "Raleway-Regular";
-        src: url("{% static 'mainsite/fonts/Raleway-Regular.ttf' %}") format("truetype");
+        src: url("static/fonts/Raleway-Regular.ttf") format("truetype");
     }
 
     @font-face {
         font-family: "Open-Sans-Bold";
-        src: url("{% static 'mainsite/fonts/OpenSans-Bold.ttf' %}") format("truetype");
+        src: url("static/fonts/OpenSans-Bold.ttf") format("truetype");
     }
 
     .services-button {
@@ -231,378 +596,7 @@
         background-color: #4FB4E6;
     }
 </style>
-<div class="image-container" style="z-index: -1;">
-    <img src="{% static 'mainsite/images/horboat.png' %}" alt="header image of a boat">
-    <div class="overlay-text">
-        <p style="font-family: 'Raleway-Bold'; font-size: 80px; margin-bottom: 0px; line-height: 1;">NUESTROS
-        </p>
-        <p
-            style="font-family: 'Raleway-Bold'; font-size: 91px; margin-top: 0px; margin-bottom: 0px; text-decoration: underline; line-height: 1;">
-            SERVICIOS</p>
-        <button class="w3-button w3-round-xlarge services-button"
-            style="padding: 15px 30px; font-family: Open-Sans-Bold; font-size: 20px;">Obtener Cotización</button>
 
-    </div>
-</div>
-<div style="display: flex; justify-content: space-between;">
-    <img style="width: 25%;" src="{% static 'mainsite/images/services/land_trans_btn.png' %}" onclick="changeDivs(1)"
-        alt="Land Transportation Image">
-    <img style="width: 25%;" src="{% static 'mainsite/images/services/air_trans_btn.png' %}" onclick="changeDivs(2)"
-        alt="Air Transportation Image">
-    <img style="width: 25%;" src="{% static 'mainsite/images/services/sea_trans_btn.png' %}" onclick="changeDivs(3)"
-        alt="Sea Transportation Image">
-    <img style="width: 25%;" src="{% static 'mainsite/images/services/other_trans_btn.png' %}" onclick="changeDivs(0)"
-        alt="Other Transportation Image">
-</div>
-
-<div class="mySlides w3-container w3-animate-right" style="display: flex; justify-content: space-between;">
-    <div style="display: flex; justify-content: space-between;">
-        <div style="width: 60%;">
-
-            <p style="font-size: large;">Confía en nosotros para simplificar tus operaciones
-                logísticas y llevar tus productos a todo el mundo.</p>
-
-            <div style="padding-left: 10%; padding-top: 7%;">
-                <p style="font-size: xx-large;">¡Ofrecemos soluciones!</p>
-                <p>En Eurocarga, nos especializamos en ofrecer soluciones de transporte terrestre
-                    confiables y eficientes para tus necesidades logísticas.
-                </p>
-                <p>Con una amplia flota de vehículos modernos y un equipo altamente capacitado,
-                    garantizamos entregas seguras y puntuales en cada envío. Desde cargas pequeñas
-                    hasta cargas pesadas, nuestro servicio de transporte terrestre cubre una amplia
-                    gama de rutas y destinos, brindándote la flexibilidad y tranquilidad que necesitas
-                    para llevar tu carga a su destino final.</p>
-                <a href="#" class="w3-bar-item w3-button">
-                    <button
-                        class="w3-button w3-round-large w3-white shadow-button border: 2px solid black; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">Solicitar
-                        servicio</button>
-                </a>
-            </div>
-        </div>
-        <img style="width: 40%;" src="{% static 'mainsite/images/services/blue_truck.png' %}" alt="Blue Truck">
-    </div>
-    <div style="display: flex; justify-content: space-between; padding: 7%;">
-        <div style="width: 33%;  padding: 7%;">
-            <img src="{% static 'mainsite/images/services/punct.png' %}" alt="header image of a boat">
-            <p>Nuestro servicio se distingue
-                por su puntualidad, asegurando
-                entregas a tiempo en cada envío</p>
-        </div>
-        <div style="width: 33%; padding: 7%;">
-            <img src="{% static 'mainsite/images/services/security.png' %}" alt="header image of a boat">
-            <p>Priorizamos la seguridad en cada
-                paso del proceso de transporte,
-                garantizando la integridad de tu
-                carga en todo momento
-
-            </p>
-        </div>
-        <div style="width: 33%; padding: 7%;">
-            <img src="{% static 'mainsite/images/services/geo.png' %}" alt="header image of a boat">
-            <p>Nuestra extensa red de rutas nos
-                permite llegar a destinos remotos
-                con facilidad, brindándote acceso
-                a una cobertura geográfica
-                completa
-            </p>
-        </div>
-    </div>
-
-    <divv style="display: flex; justify-content: space-between;">
-        <img style=" width: 50%;" src="{% static 'mainsite/images/services/blue_truck2.png' %}" alt="Image 1">
-        <div>
-            <p>Servicios especializados</p>
-            <ul style="font-size: 18px; font-family: Open-Sans-Regular;">
-                <li class="custom-list-item">Transporte Terrestre de Cargas Nacionalizadas
-                </li>
-                <li class="custom-list-item">Transportes de carga extra dimensionada</li>
-                <li class="custom-list-item">Operación terrestre multimodal (OTM)</li>
-                <li class="custom-list-item">Despacho por tránsito aduanero (DTA)</li>
-                <li class="custom-list-item">Transporte de contenedores</li>
-                <li class="custom-list-item">Transporte Refrigerado
-                </li>
-                <li class="custom-list-item">Consolidación de carga
-                </li>
-                <li class="custom-list-item">LTL consolidado</li>
-                <li class="custom-list-item">Intermodal</li>
-                <li class="custom-list-item">A granel
-                </li>
-                <li class="custom-list-item">FTL</li>
-            </ul>
-        </div>
-
-
-</div>
-
-</div>
-
-<div class="mySlides w3-container w3-animate-right" style="display: flex; justify-content: space-between;">
-    <div style="display: flex; justify-content: space-between;">
-        <img style="width: 40%;" src="{% static 'mainsite/images/services/plane.png' %}" alt="Plane Image">
-        <div style="width: 60%; text-align: right;">
-
-            <p>Alcance global en tus manos</p>
-            <p>Nuestro servicio de flete aéreo te ofrece la velocidad, confiabilidad y
-                alcance global que necesitas para llevar tus envíos a nuevas alturas.
-            </p>
-            <p>Desde entregas urgentes hasta envíos internacionales, nuestro equipo
-                experto se encarga de cada detalle, garantizando que tu carga llegue a su
-                destino final de manera segura y puntual. Confía en Eurocarga para tus
-                necesidades de transporte aéreo en importación y exportación.
-                Descubre cómo podemos hacer despegar tu negocio
-            </p>
-            <a href="#" class="w3-bar-item w3-button">
-                <button
-                    class="w3-button w3-round-large w3-white shadow-button border: 2px solid black; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">Solicitar
-                    servicio</button>
-            </a>
-        </div>
-    </div>
-    <div style="display: flex; justify-content: space-between;">
-
-        <p>
-            Con aliados de confianza las
-            tarifas competitivas son
-            nuestra garantía
-        </p>
-
-
-        <img style="width: 40%;" src="{% static 'mainsite/images/services/plane_front.png' %}" alt="Plane Image">
-    </div>
-
-    <div style="display: flex; justify-content: space-between;">
-        <div>
-            <p>
-                Con Eurocarga,
-            </p>
-            <p>
-                El cielo no es el límite: es solo
-                el comienzo de tu éxito
-            </p>
-            <a href="#" class="w3-bar-item w3-button">
-                <button
-                    class="w3-button w3-round-large w3-white shadow-button border: 2px solid black; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">Comienza
-                    ahora</button>
-            </a>
-
-        </div>
-        <div>
-            <p>Servicios especializados</p>
-            <ul style="font-size: 18px; font-family: Open-Sans-Regular;">
-                <li class="custom-list-item">Logística especial para mercancía peligrosa
-                </li>
-                <li class="custom-list-item">Transporte de carga Sobredimensionada</li>
-                <li class="custom-list-item">Transporte de cargas refrigeradas
-                </li>
-                <li class="custom-list-item">Intermodal / multimodal</li>
-                <li class="custom-list-item">Consolidación de carga</li>
-
-            </ul>
-        </div>
-    </div>
-    <div style="display: flex; justify-content: space-between;">
-        <div style="display: flex; justify-content: space-between;">
-            <img style="width: 30%;" src="{% static 'mainsite/images/services/trans_rapido.png' %}" alt="Plane Image">
-            <div>
-                <p>
-                    Tránsitos rápidos
-                </p>
-                <p>
-                    Nuestro flete aéreo garantiza
-                    entregas rápidas, minimizando
-                    los tiempos de espera y
-                    satisfaciendo las necesidades
-                    de entrega urgente
-
-                </p>
-            </div>
-        </div>
-        <div style="display: flex; justify-content: space-between;">
-            <img style="width: 30%;" src="{% static 'mainsite/images/services/seguridad.png' %}" alt="Plane Image">
-            <div>
-                <p>
-                    Seguridad
-                </p>
-                <p>
-                    Priorizamos la seguridad de tu
-                    carga, con estrictos controles y
-                    monitoreo constante durante
-                    todo el proceso de envío
-
-
-                </p>
-            </div>
-        </div>
-        <div style="display: flex; justify-content: space-between;">
-            <img style="width: 30%;" src="{% static 'mainsite/images/services/flexibilidad.png' %}" alt="Plane Image">
-            <div>
-                <p>
-                    Flexibilidad Adaptada
-
-                </p>
-                <p>
-                    Ofrecemos opciones de vuelos y
-                    rutas flexibles para adaptarnos a
-                    tus necesidades, permitiéndote
-                    cumplir con los plazos de
-                    entrega de manera eficaz
-
-
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-<div class="mySlides w3-container w3-xlarge w3-white w3-card-4 w3-animate-right">
-    <div style="display: flex; justify-content: space-between;">
-        <img style="width: 40%;" src="{% static 'mainsite/images/services/boat.png' %}" alt="Boat Image">
-        <div style="width: 60%; text-align: right;">
-
-            <p>Tu carga navegará hacia el éxito</p>
-            <p>Desde contenedores completos hasta carga consolidada, nuestra
-                amplia red de rutas y asociaciones estratégicas garantiza que tu carga
-                llegue a su destino de manera eficiente y sin contratiempos.
-            </p>
-            <p>Confía en nosotros para simplificar tus importaciones o exportaciones
-                marítimas y llevar tu negocio a nuevas fronteras.
-
-            </p>
-            <a href="#" class="w3-bar-item w3-button">
-                <button
-                    class="w3-button w3-round-large w3-white shadow-button border: 2px solid black; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">Solicitar
-                    servicio</button>
-            </a>
-        </div>
-    </div>
-</div>
-
-<div class="mySlides w3-container w3-xlarge w3-white w3-card-4 w3-animate-right">
-    <div style="display: flex; justify-content: space-between;">
-        <img style="width: 40%;" src="{% static 'mainsite/images/services/other_services.png' %}" alt="Arms Image">
-        <div style="width: 60%; text-align: right;">
-
-            <p>Otros Servicios</p>
-            <p>Descubre nuestra amplia gama de servicios de logística y aduanales.
-                Ofrecemos soluciones integrales para tus necesidades de envío.
-                ¡Confía en nosotros para simplificar tus operaciones logísticas y llevar
-                tu carga a cualquier parte del mundo con eficiencia y profesionalismo!
-            </p>
-
-        </div>
-    </div>
-</div>
-
-<div>
-    <p style="text-align: center;">Tipos de Carga</p>
-
-
-    <div class="CargoSlides w3-container w3-animate-right;"
-        style="display: flex; justify-content: space-between; position: relative;">
-        <div
-            style="display: flex; justify-content: space-between; margin-left: 25%; margin-right: 25%; padding-top: 2%; padding-bottom: 2%; border: 4px solid lightblue;">
-            <img style="position: absolute; bottom: 0; left: 20%; z-index: 4;"
-                src="{% static 'mainsite/images/services/left_btn.png' %}" onclick="lessCargoDivs(1)">
-            <img style="width: 30%; position: relative; left: -100px;"
-                src="{% static 'mainsite/images/services/carga_general.png' %}" alt="Plane Image">
-            <div>
-                <p>
-                    CARGA GENERAL
-
-                </p>
-                <p>
-                    Desde textiles hasta productos
-                    electrónicos, nuestra capacidad de
-                    transporte de carga general abarca una
-                    amplia variedad de mercancías no
-                    especializadas, ofreciendo soluciones
-                    logísticas flexibles para tus necesidades
-                    de envío estándar.
-
-
-                </p>
-                <p>
-                    CONOCE TU TIPO DE CARGA
-
-                </p>
-            </div>
-            <img style="position: absolute; top: 0; right: 20%; z-index: 4"
-                src="{% static 'mainsite/images/services/right_btn.png' %}" onclick="plusCargoDivs(1)" alt="right_btn">
-        </div>
-    </div>
-
-
-    <div class="CargoSlides w3-container w3-animate-right;"
-        style="display: flex; justify-content: space-between; position: relative;">
-        <div
-            style="display: flex; justify-content: space-between; margin-left: 25%; margin-right: 25%; padding-top: 2%; padding-bottom: 2%; border: 4px solid lightblue;">
-            <img style="position: absolute; bottom: 0; left: 20%;"
-                src="{% static 'mainsite/images/services/left_btn.png' %}" onclick="lessCargoDivs(1)">
-            <img style="width: 30%; position: relative; left: -100px;"
-                src="{% static 'mainsite/images/services/oversize.png' %}" alt="Plane Image">
-            <div>
-                <p>
-                    CARGA PESADA/OVERSIZE
-                </p>
-                <p>
-                    Con nuestra experiencia en el transporte
-                    de carga pesada y de gran tamaño,
-                    podemos manejar eficientemente
-                    productos de dimensiones y pesos
-                    excepcionales, proporcionando
-                    soluciones de transporte adaptadas a
-                    tus necesidades específicas.
-
-
-                </p>
-                <p>
-                    CONOCE TU TIPO DE CARGA
-
-                </p>
-            </div>
-            <img style="position: absolute; top: 0; right: 20%;"
-                src="{% static 'mainsite/images/services/right_btn.png' %}" onclick="plusCargoDivs(1)">
-        </div>
-    </div>
-
-
-    <div class="CargoSlides w3-container w3-animate-right;"
-        style="display: flex; justify-content: space-between; position: relative;">
-        <div
-            style="display: flex; justify-content: space-between; margin-left: 25%; margin-right: 25%; padding-top: 2%; padding-bottom: 2%; border: 4px solid lightblue;">
-            <img style="position: absolute; bottom: 0; left: 20%;"
-                src="{% static 'mainsite/images/services/left_btn.png' %}" onclick="lessCargoDivs(1)">
-            <img style="width: 30%; position: relative; left: -100px;"
-                src="{% static 'mainsite/images/services/danger.png' %}" alt="Plane Image">
-            <div>
-                <p>
-                    CARGA PELIGROSA
-
-                </p>
-                <p>
-                    Nuestro equipo especializado en carga peligrosa
-                    garantiza el transporte seguro y conforme de
-                    productos químicos, materiales inflamables y
-                    otros productos clasificados como peligrosos,
-                    cumpliendo con los más altos estándares de
-                    seguridad y normativas internacionales.
-
-
-                </p>
-                <p>
-                    CONOCE TU TIPO DE CARGA
-
-                </p>
-            </div>
-            <img style="position: absolute; top: 0; right: 20%;"
-                src="{% static 'mainsite/images/services/right_btn.png' %}" onclick="plusCargoDivs(1)">
-        </div>
-    </div>
-
-
-</div>
 <script>
     var slideIndex = 1;
     var cargoslideIndex = 1;
