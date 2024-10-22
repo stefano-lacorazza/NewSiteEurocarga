@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/icons/favicon.ico' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainsite/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    .custom-list-item {
+        background-image: url("{% static 'mainsite/images/22.png' %}");
+        background-size: auto 15px;
+        /* This will set the height of the image to 5px and adjust the width to maintain the aspect ratio */
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left: 30px;
+        /* Adjust this value as needed */
+        list-style-type: none;
+    }
+
+    @font-face {
+        font-family: "Open-Sans-Regular";
+        src: url("{% static 'mainsite/fonts/OpenSans-Regular.ttf' %}") format("truetype");
+    }
+
+    .semitransparent-image-behind-text {
+        background-image: url("{% static 'mainsite/images/21.png' %}");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+</style>
+
+<body>
+    <a href="https://api.whatsapp.com/send?phone=573104249299&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n."
+        class="wpfloat" target="_blank">
+        <i class="fa fa-whatsapp my-float fa-2x " style="padding-top: 10px;"></i>
+    </a>
+
+
+    <!-- Navbar (sit on top) -->
+    <div class="" style=" position: absolute; top: 0; width: 100%;">
+        <div class="w3-bar" id="myNavbar" style="padding-top: 20px;">
+            <a href="#" class="w3-bar-item w3-button"><img src="{% static 'mainsite/images/Logo-white.png' %}"
+                    width="300" id="toplogo" /></a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small" style="padding-top: 20px; font-size: 20px;">
+                <a href="{% url 'index' %}" class="w3-bar-item w3-button topbaritem"
+                    style="padding-top: 20px;">INICIO</a>
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <a href="{% url 'about' %}" class="w3-button w3-hide-small topbaritem"
+                        style="padding-top: 20px;"><b> QUIÉNES
+                            SOMOS</b> <i class="fa fa-caret-down"></i></a>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+                        <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-round-large topbaritem">Valores como
+                            Empresa</a>
+                        <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-round-large topbaritem">Misión y
+                            Visión</a>
+                    </div>
+                </div>
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <a href="{% url 'services' %}" class="w3-button w3-hide-small topbaritem"
+                        style="padding-top: 20px;"><b>
+                            SERVICIOS</b> <i class="fa fa-caret-down"></i></a>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+                        <a href="{% url 'services' %}"
+                            class="w3-bar-item w3-button w3-round-large topbaritem">Transporte
+                            terrestre</a>
+                        <a href="{% url 'services' %}" class="w3-bar-item w3-button topbaritem">Flete Marítimo</a>
+                        <a href="{% url 'services' %}" class="w3-bar-item w3-button topbaritem">Flete Aéreo</a>
+                        <a href="{% url 'services' %}" class="w3-bar-item w3-button w3-round-large topbaritem">Otros
+                            Servicios</a>
+                    </div>
+                </div>
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <a href="{% url 'team' %}" class="w3-button w3-hide-small topbaritem" style="padding-top: 20px;"><b>
+                            DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+                        <a href="{% url 'team' %}"
+                            class="w3-bar-item w3-button w3-round-large topbaritem">Importación</a>
+                        <a href="{% url 'team' %}" class="w3-bar-item w3-button topbaritem">Exportación</a>
+                        <a href="{% url 'team' %}"
+                            class="w3-bar-item w3-button w3-round-large topbaritem">Contabilidad</a>
+                    </div>
+                </div>
+                <a href="#contact" class="w3-bar-item w3-button"><button
+                        class="w3-button w3-round-xlarge w3-white contact-button">Contáctenos</button></a>
+                <button class="w3-button over-navbar-button" style="font-family: Raleway-Regular;"><img
+                        src="{% static 'mainsite/images/icons/colombia.png' %}" style="height: 20px; ">ES<i
+                        class="fa fa-caret-down"></i></button>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer class="w3-row-padding w3-padding-32 semitransparent-image-behind-text flex-container"
+        style="color :white; background-color: #1B4A7D;  position: relative;">
+
+        <div class="w3-third" style="border-right: 2px solid white; width: 60%;">
+            <a href="#" class="w3-bar-item w3-button"><img src="{% static 'mainsite/images/Logo-white.png' %}"
+                    width="300" id="toplogo" /></a>
+            <h3 style="font-family: Roboto-Bold;">Contáctanos:</h3>
+            <div style="font-family: Open-Sans-Regular;">
+                <img class="first-foot-icons" style="margin-top: 15px;"
+                    src="{% static 'mainsite/images/Telefono.png' %}" alt="Phone Icon">
+                <p style="margin-bottom: 0; ">(+ 57) 310 - 424 9299</p>
+                <p style="margin-top: 0;">(+ 57) 316 - 521 9867</p>
+                <img class="first-foot-icons" style="margin-top: 10px;" src="{% static 'mainsite/images/Correo.png' %}"
+                    alt="Mail Icon">
+                <p style="margin-bottom: 0;">exportaciones@eurocarga.com</p>
+                <p style="margin-top: 0;">gerencia@eurocarga.com</p>
+                <img class="first-foot-icons" src="{% static 'mainsite/images/location.png' %}" alt="Location Icon">
+                <p>Carrera 73 # 152 B - 65 Bogotá D.C - Colombia</p>
+            </div>
+
+        </div>
+
+        <div class="" style="text-align: center; border-right: 2px solid white; width: 70%;">
+            <h3 style="font-family: Roboto-Bold; text-shadow: 2px 2px 4px black;">Certificaciones</h3>
+            <p>Nos enorgullece contar con certificaciones de primera categoría que garantizan calidad, seguridad y
+                sostenibilidad.</p>
+            <div style="display: flex; justify-content: center;">
+                <img src="{% static 'mainsite/images/ISO.png' %}" style="width: 25%; height: auto;">
+                <img src="{% static 'mainsite/images/IATA.png' %}" style="width: 25%; height: auto;">
+            </div>
+        </div>
+
+        <div class="w3-third w3-serif ">
+            <div style="display: flex; justify-content: space-around;">
+                <i class="fa fa-facebook" style="font-size:30px"></i>
+                <i class="fa fa-instagram" style="font-size:30px"></i>
+                <i class="fa fa-linkedin-square" style="font-size:30px"></i>
+                <i class="fa fa-youtube" style="font-size:30px"></i>
+
+            </div>
+            <br>
+            <br>
+
+            <ul style="font-size: 18px; font-family: Open-Sans-Regular;">
+                <li class="custom-list-item">Inicio</li>
+                <li class="custom-list-item">Quiénes Somos</li>
+                <li class="custom-list-item">Servicios</li>
+                <li class="custom-list-item">Departamentos</li>
+                <li class="custom-list-item">Oficinas</li>
+                <li class="custom-list-item">Contáctenos</li>
+                <li class="custom-list-item">PQRS</li>
+            </ul>
+
+
+        </div>
+
+        <p
+            style="font-family: Raleway-Regular; text-align: center; color :white; background-color: #1B4A7D; position: absolute; bottom: 0; width: 100%; z-index: 10;">
+            EUROCARGA © 2023 - Todos los derechos reservados | Política de privacidad
+        </p>
+
+    </footer>
+
+
+
+
+
+</body>
+
+
+</html>
+
+<style>
+    @font-face {
+        font-family: "Roboto-Regular";
+        src: url("{% static 'mainsite/fonts/Roboto-Regular.ttf' %}") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Roboto-Bold";
+        src: url("{% static 'mainsite/fonts/Roboto-Bold.ttf' %}") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Raleway-Bold";
+        src: url("{% static 'mainsite/fonts/Raleway-Bold.ttf' %}") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Raleway-Regular";
+        src: url("{% static 'mainsite/fonts/Raleway-Regular.ttf' %}") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Open-Sans-Bold";
+        src: url("{% static 'mainsite/fonts/OpenSans-Bold.ttf' %}") format("truetype");
+    }
+
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /* adjust as needed */
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-container .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        /* adjust as needed */
+    }
+
+    .mivicontainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .rectangle {
+        width: 600px;
+        /* adjust as needed */
+        height: 100px;
+        /* adjust as needed */
+        background-color: #ccc;
+        /* adjust as needed */
+        margin-bottom: 10px;
+        /* adjust as needed */
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+
+    .rectangle:hover {
+        height: 300px;
+        /* adjust as needed */
+
+    }
+
+
+
+    .rectangle:hover p {
+        opacity: 1 !important;
+    }
+
+    .image-mivicontainer video {
+        width: 40%;
+        /* adjust as needed */
+    }
+
+    .space-background {
+        background-image: url("{% static 'mainsite/images/space1.png' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .services-button {
+        color: white;
+        background-color: #4FB4E6;
+    }
+</style>
+
+<div class="image-container" style="z-index: -1;">
+    <img src="{% static 'mainsite/images/horboat.png' %}" alt="header image of a boat">
+    <div class="overlay-text">
+        <p
+            style="font-family: 'Raleway-Bold'; font-size: 65px; margin-top: 0px; margin-bottom: 0px; text-decoration: underline; line-height: 1;">
+            ¿QUIENES SOMOS?</p>
+        <p style="font-family: 'Roboto-Regular'; font-size: 30px; ">¡Bienvenido a EUROCARGA!</p>
+        <button class="w3-button w3-round-xlarge services-button"
+            style="padding: 15px 30px; font-family: Open-Sans-Bold; font-size: 20px;">Nuestro Equipo</button>
+        <span style="margin-left: 40px; font-family: Open-Sans-Bold; font-size: 20px;">Oficinas</span>
+    </div>
+</div>
+
+<div style="display: flex; align-items: center;">
+    <img src="{% static 'mainsite/images/imagebox.png' %}" alt="Man carrying box" style="height: 500px;">
+    <div style="padding: 5%; font-size: 20px; font-family: Raleway-Regular;">
+        <p style="color: #417FC2;"><strong>Somos tu agencia de carga internacional</strong>, especializados en
+            simplificar y optimizar operaciones logísticas a nivel global.
+        </p>
+        <p style="font-family: Roboto-Regular;">Con años de experiencia, ofrecemos soluciones eficientes y seguras para
+            tus
+            exportaciones e importaciones. Sé parte de nuestros clientes satisfechos que confían
+            en nuestra experiencia y red global</p>
+    </div>
+</div>
+<div style="display: flex; align-items: center;">
+    <hr style="flex-grow: 1; border: none; border-top: 5px solid rgb(187, 184, 184);">
+    <p style="margin: 0 20px; font-size: 40px;color: #1B4A7D;">Conoce nuestros Valores Corporativos</p>
+    <hr style="flex-grow: 1; border: none; border-top: 5px solid rgb(187, 184, 184);">
+</div>
+
+<div class="space-background">
+    <div class="container" style="display: flex;  justify-content: space-between;  padding: 100px;">
+
+        <img src="{% static 'mainsite/images/values-image.png' %}" alt="Image 1" style="width: 100%;">
+
+    </div>
+
+    <div class="mivicontainer">
+        <div>
+            <div class="rectangle">
+                <div style="display: flex; align-items: center;  padding: 4%; padding-bottom: 0;">
+                    <img style="width: 10%;" src="{% static 'mainsite/images/mision.png' %}" alt="Image mision">
+                    <p style="color: white; margin-left: 10px;">Misión</p>
+                </div>
+                <p style=" opacity: 0; transition: opacity 0.5s;  padding: 4%;  padding-top: 0;color:white">Sostener un
+                    servicio íntegro
+                    y superior
+                    de
+                    agenciamiento en transporte de
+                    carga internacional, administrar los procesos logísticos con responsabilidad y
+                    seguridad, orientados en la satisfacción de nuestros clientes y al éxito de sus
+                    negocios, con una alta calidad en los procesos, enfocados hacia la eficiencia,
+                    productividad y rentabilidad tanto de importaciones, exportaciones y aliados
+                    clientes como de nuestra compañía, de acuerdo a tiempos pactados.
+                </p>
+            </div>
+            <div class="rectangle">
+                <div style="display: flex; align-items: center; padding: 4%; padding-bottom: 0;">
+                    <img style="width: 10%; " src="{% static 'mainsite/images/vision.png' %}" alt="Image mision">
+                    <p style="color: white; margin-left: 10px; ">Visión</p>
+                </div>
+
+                <p style=" opacity: 0; transition: opacity 0.5s;  padding: 4%;  padding-top: 0; color:white">vision
+                    vision vision vision
+                    vision
+                    vision vision
+                    vision vision vision vision vision vision vision vision vision vision vision vision vision vision
+                    vision vision vision vision vision
+                </p>
+            </div>
+            <div class="rectangle">
+                <div style="display: flex; align-items: center;  padding: 4%; padding-bottom: 0;">
+                    <img style="width: 10%;" src="{% static 'mainsite/images/Objetivos.png' %}" alt="Image mision">
+                    <p style="color: white; margin-left: 10px;">Objetivos</p>
+                </div>
+
+                <p style=" opacity: 0; transition: opacity 0.5s;padding: 4%; padding-top: 0; color:white">Objetivo
+                    Objetivo Objetivo
+                    Objetivo Objetivo Objetivo
+                    Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo
+                    Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo Objetivo
+                    Objetivo
+            </div>
+        </div>
+        <div class="miviimage-container">
+            <video autoplay loop id="vid" muted width="100%">
+                <source src="{% static 'mainsite/videos/half-earth.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div style="padding-left: 10%;">
+        <strong>
+            <p style="color: #1B4A7D; font-size: 30px; ">En EUROCARGA, lideramos la logística internacional
+            </p>
+            <p style="color: #1B4A7D; font-size: 30px; ">con calidad y confiabilidad.</p>
+        </strong>
+    </div>
+
+
+    <div style="position: relative;">
+        <img src="{% static 'mainsite/images/truck.png' %}" alt="A truck" style="width: 100%;">
+        <div style="position: absolute; top: 0%; left: 75%;">
+            <p style=" font-size: 40px;">Desde <span style="color: #1B4A7D;">1983</span></p>
+            <p style="font-size: 20px; font-family: Roboto-Regular;"><span style="color: #1B4A7D;">EUROCARGA </span>ha
+                sido un pilar confiable en la logística de Bogotá, Colombia.
+                Con décadas de experiencia, nos destacamos en exportación e importación,
+                construyendo relaciones sólidas en todo el mundo.
+            </p>
+            <p style="font-size: 20px; font-family: Roboto-Regular;">Nuestra
+                presencia a largo plazo refleja
+                nuestro compromiso con la excelencia
+                y la satisfacción del cliente.
+            </p>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
